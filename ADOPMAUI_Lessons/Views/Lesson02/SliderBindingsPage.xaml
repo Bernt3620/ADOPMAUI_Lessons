@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADOPMAUI_Lessons.Views.Lesson02.SliderBindingsPage"
+             Title="Slider Bindings Page">
+    <StackLayout>
+        <Frame BackgroundColor="LightGrey">
+            <StackLayout>
+                <Label Text="XAML Binding"/>
+                <Label Text="ROTATION"
+               BindingContext="{x:Reference slider}"
+               Rotation="{Binding Path=Value}"
+               FontAttributes="Bold"
+               FontSize="20"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <Slider x:Name="slider"
+                Maximum="360"
+                VerticalOptions="Center"
+                Margin="20,0,20,0" />
+        <Label BindingContext="{x:Reference slider}"
+               Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="LightGrey">
+            <StackLayout>
+                <Label Text="C# Binding"/>
+                <Label x:Name="lblRotation" Text="ROTATION"
+               FontAttributes="Bold"
+               FontSize="20"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+                <Slider x:Name="slider2"
+                Maximum="360"
+                VerticalOptions="Center"
+                Margin="20,0,20,0" />
+                <Label x:Name="lblDegree1" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                <Label x:Name="lblDegree2" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ADOPMAUI_Lessons.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ADOPMAUI_Lessons"
+    xmlns:views="clr-namespace:ADOPMAUI_Lessons.Views"
+    Shell.FlyoutBehavior="Flyout" >
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="home" />
+    <ShellContent
+    Title="Lesson 2"
+    ContentTemplate="{DataTemplate views:Lesson02a}"
+    Route="lesson2" />
+    <FlyoutItem x:Name="flyLesson04" Title="Lesson 4">
+        <ShellContent
+                Title="Lesson 4"
+                ContentTemplate="{DataTemplate views:Lesson04a}"
+                Route="lesson4" />
+    </FlyoutItem>
+    <FlyoutItem x:Name="flyLesson05" Title="Lesson 5" Route="lesson5">
+        <Tab Title="Hierarchial navigation">
+        <ShellContent
+                Title="Hierarchial navigation"
+                ContentTemplate="{DataTemplate views:Lesson05a}"
+                Route="hierachial" />
+        </Tab>
+    </FlyoutItem>
+</Shell>
