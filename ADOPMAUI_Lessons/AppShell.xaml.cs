@@ -31,22 +31,15 @@ public partial class AppShell : Shell
     //alternative constructor to show parameter passing from App.xaml.cs
     public AppShell((DateTime date, string greeting) shellData) : this()
 	{
-		//Only to demonstrate using parameters to pass data at page construction time
-		var dt = shellData.date;
-		var s = shellData.greeting;
-
-        var aTab = new Tab { Title = "Passing data using constructor" };
-		aTab.Items.Add(new ShellContent
-        {
-            Title = "Passing data using constructor",
-            Route = "passingdatacons",
-            ContentTemplate = new DataTemplate(() => new PassingDataConstructorPage(dt, s))
-        });
-        flyLesson04.Items.Add(aTab);
+        //Demonstrate how I receieve data from App using AppShell constructor 
+        var recievedDate = shellData.date;
+        var recievedGreeting = shellData.greeting;
 
 
+        //Demonstrate how to dynamically build menus in Shell and
+        //using parameters to pass data through page constructor
         var Colors = NamedColor.All.ToList();
-        aTab = new Tab { Title = Colors[0].FriendlyName };
+        var aTab = new Tab { Title = Colors[0].FriendlyName };
         aTab.Items.Add(new ShellContent
         {
             Title = Colors[0].FriendlyName,

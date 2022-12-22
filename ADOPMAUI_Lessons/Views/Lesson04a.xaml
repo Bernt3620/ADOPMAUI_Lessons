@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
  			 xmlns:viewmodels="clr-namespace:ADOPMAUI_Lessons.ViewModels"
-             x:Class="ADOPMAUI_Lessons.Views.Lesson02a"
+             x:Class="ADOPMAUI_Lessons.Views.Lesson04a"
              Padding="5,0"
-             Title="Lesson 2">
+             Title="Lesson 4">
     <VerticalStackLayout>
-        <ListView ItemsSource="{x:Static viewmodels:Lesson02ViewModel.All}"
+        <ListView ItemsSource="{x:Static viewmodels:Lesson04aViewModel.All}"
 			  ItemSelected="OnListViewItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>

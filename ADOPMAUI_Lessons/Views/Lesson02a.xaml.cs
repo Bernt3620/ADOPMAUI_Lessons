@@ -15,7 +15,7 @@ namespace ADOPMAUI_Lessons.Views
 
             if (args.SelectedItem != null)
             {
-                Lesson02ViewModel pageData = args.SelectedItem as Lesson02ViewModel;
+                Lesson02aViewModel pageData = args.SelectedItem as Lesson02aViewModel;
                 Page page = (Page)Activator.CreateInstance(pageData.Type);
                 await Navigation.PushAsync(page);
             }

@@ -1,11 +1,11 @@
-﻿using ADOPMAUI_Lessons.Views.Lesson02;
+﻿using ADOPMAUI_Lessons.Views.Lesson04;
 using Microsoft.Maui.Controls;
 
 namespace ADOPMAUI_Lessons.ViewModels
 {
-    public class Lesson02ViewModel
+    public class Lesson04aViewModel
     {
-        public Lesson02ViewModel(Type type, string title, string description)
+        public Lesson04aViewModel(Type type, string title, string description)
         {
             Type = type;
             Title = title;
@@ -18,55 +18,70 @@ namespace ADOPMAUI_Lessons.ViewModels
 
         public string Description { private set; get; }
 
-        static Lesson02ViewModel()
+        static Lesson04aViewModel()
         {
-            All = new List<Lesson02ViewModel>
+            All = new List<Lesson04aViewModel>
             {
+                new Lesson04aViewModel(typeof(PickerDemoPage), "Picker Examples",
+                        "Pick a value from Date, Time and Color"),
+
+                new Lesson04aViewModel(typeof(AlteringViewXamlPage), "Altering View",
+                        "Alter view properties using XAML binding"),
+
+                new Lesson04aViewModel(typeof(ListViewDemoPage), "ListView Demo",
+                        "Use a ListView with data bindings"),
+ 
+                new Lesson04aViewModel(typeof(ListViewCustomizationPage), "ListView Customization",
+                        "Customize a ListView using ViewCell"),
                 
+                new Lesson04aViewModel(typeof(ListViewGroupingPage), "ListView Grouping",
+                        "Group ListView using GroupHeaderTemplate and Linq"),
+               
+                /*
                 // Part 1. Getting Started with XAML
-                new Lesson02ViewModel(typeof(HelloXamlPage), "Hello, XAML",
+                new Lesson04ViewModel(typeof(HelloXamlPage), "Hello, XAML",
                                       "Display a Label with many properties set"),
 
-                new Lesson02ViewModel(typeof(XamlPlusCodePage), "XAML + Code",
+                new Lesson04ViewModel(typeof(XamlPlusCodePage), "XAML + Code",
                                       "Interact with a Slider and Button"),
 
                 // Part 2. Essential XAML Syntax
-                new Lesson02ViewModel(typeof(GridDemoPage), "Grid Demo",
+                new Lesson04ViewModel(typeof(GridDemoPage), "Grid Demo",
                                       "Explore XAML syntax with the Grid"),
 
                  // Part 3. XAML Markup Extensions
-                new Lesson02ViewModel(typeof(SharedResourcesPage), "Shared Resources",
+                new Lesson04ViewModel(typeof(SharedResourcesPage), "Shared Resources",
                                       "Using resource dictionaries to share resources"),
 
 
-                new Lesson02ViewModel(typeof(StaticDemoPage), "x:Static Demo",
+                new Lesson04ViewModel(typeof(StaticDemoPage), "x:Static Demo",
                                       "Using the x:Static markup extensions"),
 
-                new Lesson02ViewModel(typeof(TypeDemoPage), "x:Type Demo",
+                new Lesson04ViewModel(typeof(TypeDemoPage), "x:Type Demo",
                                       "Associate Buttons with a Type"),
 
-                new Lesson02ViewModel(typeof(ReferenceDemoPage), "x:Reference Demo",
+                new Lesson04ViewModel(typeof(ReferenceDemoPage), "x:Reference Demo",
                                       "Reference named elements on the page in Binding"),
 
-                new Lesson02ViewModel(typeof(OnPlatformDemoPage), "OnPlatform Demo",
+                new Lesson04ViewModel(typeof(OnPlatformDemoPage), "OnPlatform Demo",
                         "Specify values per platform"),
  
-                new Lesson02ViewModel(typeof(OnIdiomDemoPage), "OnIdiom Demo",
+                new Lesson04ViewModel(typeof(OnIdiomDemoPage), "OnIdiom Demo",
                         "Specify values per idiom"),
 
               
-                new Lesson02ViewModel(typeof(SliderBindingsPage), "Slider Bindings",
+                new Lesson04ViewModel(typeof(SliderBindingsPage), "Slider Bindings",
                                       "Bind properties of two views on the page"),
 
-                new Lesson02ViewModel(typeof(SliderTransformsPage), "Slider Transforms",
-                                      "Use Sliders with bindings"),
+                new Lesson04ViewModel(typeof(SliderTransformsPage), "Slider Transforms",
+                                      "Use Sliders with reverse bindings"),
 
-                 new Lesson02ViewModel(typeof(StringFormattingPage), "String Formatting",
+                 new Lesson04ViewModel(typeof(StringFormattingPage), "String Formatting",
                                       "Use standard .NET formatting specfications"),
                  
-                 new Lesson02ViewModel(typeof(MultiBindingStringFormatPage), "String Formatting",
+                 new Lesson04ViewModel(typeof(MultiBindingStringFormatPage), "String Formatting",
                                       "Combine strings from a MultiBinding"),
-             /*
+           
                 new PageDataViewModel(typeof(ListViewDemoPage), "String Formatting",
                                       "Use a ListView with data bindings"),
 
@@ -86,6 +101,6 @@ namespace ADOPMAUI_Lessons.ViewModels
             };
         }
 
-        public static IList<Lesson02ViewModel> All { private set; get; }
+        public static IList<Lesson04aViewModel> All { private set; get; }
     }
 }

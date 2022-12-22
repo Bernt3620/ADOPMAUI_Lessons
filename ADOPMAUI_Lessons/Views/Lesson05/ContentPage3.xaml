@@ -7,6 +7,9 @@
         <StackLayout Spacing="50">
             <StackLayout VerticalOptions="Start">
                 <Label Text="ContentPage3 data goes here" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                <Label Text="Data passed to page using IDictionary:" HorizontalOptions="Center"/>
+                <Label x:Name="lblMessage" HorizontalOptions="Center" />
+                <Label x:Name="lblTime" HorizontalOptions="Center" />
             </StackLayout>
             <Frame BorderColor="Black">
                 <StackLayout VerticalOptions="Center">

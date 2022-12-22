@@ -52,10 +52,10 @@
 	  <MauiXaml Update="Views\Lesson05a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson04.xaml">
+	  <MauiXaml Update="Views\Lesson04a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson02.xaml">
+	  <MauiXaml Update="Views\Lesson02a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson02\GridDemoPage.xaml">
@@ -115,9 +115,6 @@
 	  <MauiXaml Update="Views\Lesson05\ContentPage3.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson05\PassingDataQueryParamPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson04\PassingDataConstructorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -133,20 +130,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\Lesson02a.xaml.cs">
+	    <DependentUpon>Lesson02a.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Lesson05a.xaml.cs">
 	    <DependentUpon>Lesson05a.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Lesson04.xaml.cs">
-	    <DependentUpon>Lesson04.xaml</DependentUpon>
+	  <Compile Update="Views\Lesson04a.xaml.cs">
+	    <DependentUpon>Lesson04a.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson04\ListViewGroupingPage.xaml.cs">
 	    <DependentUpon>ListViewGroupingPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson04\ListViewCustomizationPage.xaml.cs">
 	    <DependentUpon>ListViewCustomizationPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\Lesson05\PassingDataQueryParamPage.xaml.cs">
-	    <DependentUpon>PassingDataQueryParamPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson04\PassingDataConstructorPage.xaml.cs">
 	    <DependentUpon>PassingDataConstructorPage.xaml</DependentUpon>

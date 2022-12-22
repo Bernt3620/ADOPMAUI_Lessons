@@ -1,11 +1,33 @@
 namespace ADOPMAUI_Lessons.Views.Lesson05;
 
-public partial class ContentPage3 : ContentPage
+public partial class ContentPage3 : ContentPage, IQueryAttributable
 {
-	public ContentPage3()
+    //Data that is passed from ContentPage2 as IDictionary<string, object>
+    //Properties mapped from query parameters using IQueryAttributable implementation 
+    public DateTime? time { get; set; }      //nullable DateTime struct in case no data is passed to page
+    public string message { get; set; }
+
+    public void ApplyQueryAttributes(IDictionary<string, object> query)
+    {
+        //when data is passed as IDictionary, they are passed as their types, not text
+        time = query.ContainsKey("time") ? query["time"] as DateTime? : null;         
+        message = query.ContainsKey("message") ? query["message"] as string : null;
+    }
+
+    public ContentPage3()
 	{
 		InitializeComponent();
 	}
+
+    protected override void OnAppearing()
+    {
+        //This is a safe time to initialize the page, e.g. use the data passed as a IDictionary
+        lblMessage.Text = message;
+        lblTime.Text = time.HasValue ? time.Value.ToString() : null;
+
+        base.OnAppearing();
+    }
+
     async void OnQuestion1ButtonClicked(object sender, EventArgs e)
     {
         string result = await DisplayPromptAsync("Question 1", "What's your name?", initialValue: string.Empty);

@@ -8,6 +8,8 @@ public partial class TabbedColorPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	//Constructor invoked from the Shell menu passing data through a constructor
 	public TabbedColorPage(NamedColor color):this()
 	{
 		this.BindingContext= color;
