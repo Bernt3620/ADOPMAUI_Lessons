@@ -1,11 +1,11 @@
-﻿using ADOPMAUI_Lessons.Views.Lesson05;
+﻿using ADOPMAUI_Lessons.Views.Lesson06;
 using Microsoft.Maui.Controls;
 
 namespace ADOPMAUI_Lessons.ViewModels
 {
-    public class Lesson05aViewModel
+    public class Lesson06aViewModel
     {
-        public Lesson05aViewModel(Type type, string title, string description)
+        public Lesson06aViewModel(Type type, string title, string description)
         {
             Type = type;
             Title = title;
@@ -18,18 +18,12 @@ namespace ADOPMAUI_Lessons.ViewModels
 
         public string Description { private set; get; }
 
-        static Lesson05aViewModel()
+        static Lesson06aViewModel()
         {
-            All = new List<Lesson05aViewModel>
+            All = new List<Lesson06aViewModel>
             {
-                new Lesson05aViewModel(typeof(ContentPage1), "ContentPage1",
-                        "Navigate to ContentPage1"),
-
-                new Lesson05aViewModel(typeof(ContentPage2), "ContentPage2",
-                        "Navigate to ContentPage2"),
-                
-                new Lesson05aViewModel(typeof(ContentPage3), "ContentPage3",
-                        "Navigate to ContentPage3"),
+                new Lesson06aViewModel(typeof(ActivityProgressPage), "ActivityIndicator and ProgressBar Demos",
+                        "Show usage of Activity and Progress indicators"),
              
                 /*
                 // Part 1. Getting Started with XAML
@@ -95,6 +89,6 @@ namespace ADOPMAUI_Lessons.ViewModels
             };
         }
 
-        public static IList<Lesson05aViewModel> All { private set; get; }
+        public static IList<Lesson06aViewModel> All { private set; get; }
     }
 }

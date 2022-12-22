@@ -29,4 +29,9 @@
                 Route="hierachial" />
         </Tab>
     </FlyoutItem>
+    <ShellContent
+    Title="Lesson 6"
+    ContentTemplate="{DataTemplate views:Lesson06a}"
+    Route="lesson6" />
+
 </Shell>

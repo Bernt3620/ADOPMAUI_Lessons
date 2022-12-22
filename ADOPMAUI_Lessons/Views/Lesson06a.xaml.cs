@@ -3,9 +3,9 @@ using ADOPMAUI_Lessons.ViewModels;
 namespace ADOPMAUI_Lessons.Views
 {
 
-    public partial class Lesson05a : ContentPage
+    public partial class Lesson06a : ContentPage
     {
-        public Lesson05a()
+        public Lesson06a()
         {
             InitializeComponent();
         }
@@ -15,7 +15,7 @@ namespace ADOPMAUI_Lessons.Views
 
             if (args.SelectedItem != null)
             {
-                Lesson05aViewModel pageData = args.SelectedItem as Lesson05aViewModel;
+                Lesson06aViewModel pageData = args.SelectedItem as Lesson06aViewModel;
                 Page page = (Page)Activator.CreateInstance(pageData.Type);
                 await Navigation.PushAsync(page);
             }
