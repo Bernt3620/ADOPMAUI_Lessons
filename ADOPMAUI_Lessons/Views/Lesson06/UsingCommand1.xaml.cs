@@ -2,15 +2,15 @@ using ADOPMAUI_Lessons.ViewModels;
 
 namespace ADOPMAUI_Lessons.Views.Lesson06;
 
-public partial class NonTrivialDataBinding4 : ContentPage
+public partial class UsingCommand1 : ContentPage
 {
-	NonTrivialDataBinding4ViewModel _viewmodel;
+	UsingCommand1ViewModel _viewmodel;
 
-	public NonTrivialDataBinding4()
+	public UsingCommand1()
 	{
 		InitializeComponent();
 
-        _viewmodel = new NonTrivialDataBinding4ViewModel();
+        _viewmodel = new UsingCommand1ViewModel();
         this.BindingContext = _viewmodel;
     }
 

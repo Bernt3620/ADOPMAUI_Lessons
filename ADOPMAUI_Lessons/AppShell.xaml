@@ -32,7 +32,7 @@
     <FlyoutItem x:Name="flyLesson06" Title="Lesson 6" Route="lesson6">
         <Tab Title="ActivityIndicator and ProgressBar">
             <ShellContent
-                Title="ActivityIndicator and ProgressBar Demos"
+                Title="ActivityIndicator and ProgressBar"
                 ContentTemplate="{DataTemplate views:Lesson06a}"
                 Route="activityindicators" />
         </Tab>
@@ -41,6 +41,12 @@
                 Title="Non trivial Databinding"
                 ContentTemplate="{DataTemplate views:Lesson06b}"
                 Route="nontrivialdatabinding" />
+        </Tab>
+        <Tab Title="Viewmodel using Command">
+            <ShellContent
+                Title="Viewmodel using Command"
+                ContentTemplate="{DataTemplate views:Lesson06c}"
+                Route="viewmodelusingcommand" />
         </Tab>
     </FlyoutItem>
 

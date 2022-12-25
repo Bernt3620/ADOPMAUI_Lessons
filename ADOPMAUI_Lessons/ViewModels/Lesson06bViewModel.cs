@@ -30,12 +30,6 @@ namespace ADOPMAUI_Lessons.ViewModels
 
                 new Lesson06bViewModel(typeof(NonTrivialDataBinding3), "Non trivial Databinding 3",
                         "Towards ViewModel"),
-
-                new Lesson06bViewModel(typeof(NonTrivialDataBinding4), "Non trivial Databinding 4",
-                        "Full ViewModel implemented"),
-
-                new Lesson06bViewModel(typeof(NonTrivialDataBinding5), "Non trivial Databinding 5",
-                        "L4 ListViewDemo implemented with full ViewModel"),
             };
         }
 

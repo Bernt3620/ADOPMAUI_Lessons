@@ -3,13 +3,13 @@ using ADOPMAUI_Lessons.ViewModels;
 
 namespace ADOPMAUI_Lessons.Views.Lesson06;
 
-public partial class NonTrivialDataBinding5 : ContentPage
+public partial class UsingCommand2 : ContentPage
 {
-    NonTrivialDataBinding5ViewModel _viewmodel;
-    public NonTrivialDataBinding5()
+    UsingCommand2ViewModel _viewmodel;
+    public UsingCommand2()
 	{
         InitializeComponent();
-        _viewmodel = new NonTrivialDataBinding5ViewModel();
+        _viewmodel = new UsingCommand2ViewModel();
         this.BindingContext = _viewmodel;
     }
     private async void lvFriends_ItemSelected(object sender, SelectedItemChangedEventArgs e)

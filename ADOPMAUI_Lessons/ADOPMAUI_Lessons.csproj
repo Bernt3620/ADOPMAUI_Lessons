@@ -130,7 +130,13 @@
 	  <MauiXaml Update="Views\Lesson05\TabbedColorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson06c.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson06\ActivityProgressPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson06\DecimalKeypadPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson06\NonTrivialDataBinding1.xaml">
@@ -142,10 +148,10 @@
 	  <MauiXaml Update="Views\Lesson06\NonTrivialDataBinding3.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson06\NonTrivialDataBinding4.xaml">
+	  <MauiXaml Update="Views\Lesson06\UsingCommand1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson06\NonTrivialDataBinding5.xaml">
+	  <MauiXaml Update="Views\Lesson06\UsingCommand2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
@@ -180,6 +186,15 @@
 	  </Compile>
 	  <Compile Update="Views\Lesson05\TabbedColorPage.xaml.cs">
 	    <DependentUpon>TabbedColorPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson06c.xaml.cs">
+	    <DependentUpon>Lesson06c.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson06\UsingCommand2.xaml.cs">
+	    <DependentUpon>UsingCommand2.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson06\UsingCommand1.xaml.cs">
+	    <DependentUpon>UsingCommand1.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 

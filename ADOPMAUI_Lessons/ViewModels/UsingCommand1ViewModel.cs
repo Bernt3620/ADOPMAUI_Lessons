@@ -8,8 +8,8 @@ using System.Windows.Input;
 
 namespace ADOPMAUI_Lessons.ViewModels
 {
-    #region NonTrivialDataBinding4ViewModel is ItemC implemented as a full ViewModel
-    public class NonTrivialDataBinding4ViewModel : BaseViewModel
+    #region UsingCommand1ViewModel is ItemC implemented as a full ViewModel
+    public class UsingCommand1ViewModel : BaseViewModel
     {
         
         string _message;
@@ -32,7 +32,7 @@ namespace ADOPMAUI_Lessons.ViewModels
         ICommand _changeValueCommand;
         public ICommand ChangeValueCommand => _changeValueCommand;
 
-        public NonTrivialDataBinding4ViewModel()
+        public UsingCommand1ViewModel()
         {
             Message = "A message from item";
             Creation = DateTime.Now;

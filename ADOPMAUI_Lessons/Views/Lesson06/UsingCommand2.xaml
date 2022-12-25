@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ADOPMAUI_Lessons.ViewModels"
-             x:Class="ADOPMAUI_Lessons.Views.Lesson06.NonTrivialDataBinding5"
-             Title="NonTrivialDataBinding5 ListView Demo as a ViewModel">
+             x:Class="ADOPMAUI_Lessons.Views.Lesson06.UsingCommand2"
+             Title="UsingCommand2 ListView Demo as a ViewModel">
     <StackLayout>
         <Label Text="ListView"
                FontSize="50"
@@ -17,10 +17,10 @@
                     <ViewCell>
                         <ViewCell.ContextActions>
                             <MenuItem Text="Change" 
-                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:NonTrivialDataBinding5ViewModel}},Path=ChangeCommand}" 
+                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:UsingCommand2ViewModel}},Path=ChangeCommand}" 
                                       CommandParameter="{Binding .}"/>
                             <MenuItem Text="Delete"
-                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:NonTrivialDataBinding5ViewModel}},Path=DeleteCommand}" 
+                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:UsingCommand2ViewModel}},Path=DeleteCommand}" 
                                       CommandParameter="{Binding .}"/>
                         </ViewCell.ContextActions>
                         <StackLayout Padding="0, 5"

@@ -11,7 +11,7 @@ using ADOPMAUI_Lessons.Models;
 
 namespace ADOPMAUI_Lessons.ViewModels
 {
-    public class NonTrivialDataBinding5ViewModel : BaseViewModel
+    public class UsingCommand2ViewModel : BaseViewModel
     {
         public ObservableCollection<Friend> Items { get; set; }
 
@@ -21,7 +21,7 @@ namespace ADOPMAUI_Lessons.ViewModels
         public ICommand ChangeCommand => _changeCommand;
         public ICommand DeleteCommand => _deleteCommand;
 
-        public NonTrivialDataBinding5ViewModel()
+        public UsingCommand2ViewModel()
         {
             Items = new ObservableCollection<Friend>(Friend.Factory.CreateRandom(20));
 
