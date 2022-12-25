@@ -4,7 +4,7 @@
              xmlns:viewmodels="clr-namespace:ADOPMAUI_Lessons.ViewModels"
              x:Class="ADOPMAUI_Lessons.Views.Lesson06.NonTrivialDataBinding5"
              Title="NonTrivialDataBinding5 ListView Demo as a ViewModel">
-    <VerticalStackLayout>
+    <StackLayout>
         <Label Text="ListView"
                FontSize="50"
                FontAttributes="Bold"
@@ -39,5 +39,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </VerticalStackLayout>
+    </StackLayout>
 </ContentPage>
