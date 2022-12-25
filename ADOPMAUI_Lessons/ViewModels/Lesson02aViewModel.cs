@@ -66,23 +66,6 @@ namespace ADOPMAUI_Lessons.ViewModels
                  
                  new Lesson02aViewModel(typeof(MultiBindingStringFormatPage), "String Formatting",
                                       "Combine strings from a MultiBinding"),
-             /*
-                new PageDataViewModel(typeof(ListViewDemoPage), "String Formatting",
-                                      "Use a ListView with data bindings"),
-
-                // Part 5. From Data Bindings to MVVM
-                new PageDataViewModel(typeof(OneShotDateTimePage), "One-Shot DateTime",
-                                      "Obtain the current DateTime and display it"),
-
-                new PageDataViewModel(typeof(ClockPage), "Clock",
-                                      "Dynamically display the current time"),
-
-                new PageDataViewModel(typeof(HslColorScrollPage), "HSL Color Scroll",
-                                      "Use a view model to select HSL colors"),
-
-                new PageDataViewModel(typeof(KeypadPage), "Keypad",
-                                      "Use a view model for numeric keypad logic")
-                */
             };
         }
 

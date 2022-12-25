@@ -65,8 +65,6 @@ public partial class AppShell : Shell
             ContentTemplate = new DataTemplate(() => new TabbedColorPage(Colors[2]))
         });
         flyLesson05.Items.Add(aTab);
-
-
     }
 
     protected override void OnNavigated(ShellNavigatedEventArgs args)
