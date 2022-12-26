@@ -55,8 +55,12 @@ namespace ADOPMAUI_Lessons.ViewModels
                         "Specify values per idiom"),
 
               
-                new Lesson02aViewModel(typeof(SliderBindingsPage), "Slider Bindings",
+                new Lesson02aViewModel(typeof(SliderBindingsPage), "Slider Bindings1",
                                       "Bind properties of two views on the page"),
+                
+                new Lesson02aViewModel(typeof(SliderBindingsPage2), "Slider Bindings2",
+                                      "Bind multiple properties"),
+
 
                 new Lesson02aViewModel(typeof(SliderTransformsPage), "Slider Transforms",
                                       "Use Sliders with bindings"),

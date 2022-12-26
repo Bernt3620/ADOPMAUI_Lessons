@@ -49,6 +49,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Lesson02\SliderBindingsPage2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson06a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -159,6 +162,9 @@
 	<ItemGroup>
 	  <Compile Update="Views\Lesson02a.xaml.cs">
 	    <DependentUpon>Lesson02a.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson02\SliderBindingsPage2.xaml.cs">
+	    <DependentUpon>SliderBindingsPage2.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson06a.xaml.cs">
 	    <DependentUpon>Lesson06a.xaml</DependentUpon>
