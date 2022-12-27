@@ -49,7 +49,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Lesson03a.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson02\SliderBindingsPage2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson03\AbsoluteLayoutDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson03\GridLayoutDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson06a.xaml">
@@ -160,6 +169,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\Lesson03a.xaml.cs">
+	    <DependentUpon>Lesson03a.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Lesson02a.xaml.cs">
 	    <DependentUpon>Lesson02a.xaml</DependentUpon>
 	  </Compile>

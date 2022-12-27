@@ -15,6 +15,10 @@
     Title="Lesson 2"
     ContentTemplate="{DataTemplate views:Lesson02a}"
     Route="lesson2" />
+    <ShellContent
+    Title="Lesson 3"
+    ContentTemplate="{DataTemplate views:Lesson03a}"
+    Route="lesson3" />
     <FlyoutItem x:Name="flyLesson04" Title="Lesson 4">
         <ShellContent
                 Title="Lesson 4"
