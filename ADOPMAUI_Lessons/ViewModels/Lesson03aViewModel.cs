@@ -23,12 +23,16 @@ namespace ADOPMAUI_Lessons.ViewModels
             All = new List<Lesson03aViewModel>
             {
                 
-                // Part 1. Getting Started with XAML
-                new Lesson03aViewModel(typeof(AbsoluteLayoutDemo), "AbsoluteLayoutDemo",
-                                      "Demonstrate the AbsoluteLayout"),
-
-                new Lesson03aViewModel(typeof(GridLayoutDemo), "GridLayoutDemo",
-                                      "Demonstrate the GridLayout")
+                    new Lesson03aViewModel(typeof(StackLayout1), "StackLayout demo1",
+                                      "Explore StackLayout"),
+                    new Lesson03aViewModel(typeof(AbsoluteLayout1), "AbsoluteLayout demo1",
+                                      "Explore AbsoluteLayout"),
+                    new Lesson03aViewModel(typeof(AbsoluteLayout2), "AbsoluteLayout demo2",
+                                      "AbsoluteLayout more advanced"),
+                    new Lesson03aViewModel(typeof(GridLayout1), "GridLayout demo1",
+                                      "Explore GridLayout"),
+                    new Lesson03aViewModel(typeof(GridLayout2), "GridLayout demo2",
+                                      "GridLayout more advanced")
             };
         }
 

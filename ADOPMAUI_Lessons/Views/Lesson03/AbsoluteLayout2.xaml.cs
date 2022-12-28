@@ -5,9 +5,9 @@ using ADOPMAUI_Lessons.Models;
 
 namespace ADOPMAUI_Lessons.Views.Lesson03
 {
-	public partial class AbsoluteLayoutDemo : ContentPage
+	public partial class AbsoluteLayout2 : ContentPage
 	{
-		public AbsoluteLayoutDemo()
+		public AbsoluteLayout2()
 		{
 			InitializeComponent();
 			status.Text = "the anchor point of a child is interpolated based on its position\n\n" +

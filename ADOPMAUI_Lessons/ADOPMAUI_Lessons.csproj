@@ -55,10 +55,19 @@
 	  <MauiXaml Update="Views\Lesson02\SliderBindingsPage2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson03\AbsoluteLayoutDemo.xaml">
+	  <MauiXaml Update="Views\Lesson03\AbsoluteLayout2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson03\GridLayoutDemo.xaml">
+	  <MauiXaml Update="Views\Lesson03\AbsoluteLayout1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson03\GridLayout2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson03\GridLayout1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson03\StackLayout1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson06a.xaml">
@@ -177,6 +186,21 @@
 	  </Compile>
 	  <Compile Update="Views\Lesson02\SliderBindingsPage2.xaml.cs">
 	    <DependentUpon>SliderBindingsPage2.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson03\AbsoluteLayout1.xaml.cs">
+	    <DependentUpon>AbsoluteLayout1.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson03\AbsoluteLayout2.xaml.cs">
+	    <DependentUpon>AbsoluteLayout2.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson03\GridLayout1.xaml.cs">
+	    <DependentUpon>GridLayout1.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson03\GridLayout2.xaml.cs">
+	    <DependentUpon>GridLayout2.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson03\StackLayout1.xaml.cs">
+	    <DependentUpon>StackLayout1.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson06a.xaml.cs">
 	    <DependentUpon>Lesson06a.xaml</DependentUpon>
