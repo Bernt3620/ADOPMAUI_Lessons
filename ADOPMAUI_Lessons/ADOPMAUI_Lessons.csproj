@@ -70,6 +70,9 @@
 	  <MauiXaml Update="Views\Lesson03\StackLayout1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson04\SettingValueDemoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson06a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -142,9 +145,6 @@
 	  <MauiXaml Update="Views\Lesson04\PassingDataConstructorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson04\PickerDemoPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson04\AlteringViewXamlPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -202,6 +202,9 @@
 	  <Compile Update="Views\Lesson03\StackLayout1.xaml.cs">
 	    <DependentUpon>StackLayout1.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Lesson04\SettingValueDemoPage.xaml.cs">
+	    <DependentUpon>SettingValueDemoPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Lesson06a.xaml.cs">
 	    <DependentUpon>Lesson06a.xaml</DependentUpon>
 	  </Compile>
@@ -219,9 +222,6 @@
 	  </Compile>
 	  <Compile Update="Views\Lesson04\PassingDataConstructorPage.xaml.cs">
 	    <DependentUpon>PassingDataConstructorPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\Lesson04\PickerDemoPage.xaml.cs">
-	    <DependentUpon>PickerDemoPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson04\AlteringViewXamlPage.xaml.cs">
 	    <DependentUpon>AlteringViewXamlPage.xaml</DependentUpon>

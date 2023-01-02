@@ -22,8 +22,8 @@ namespace ADOPMAUI_Lessons.ViewModels
         {
             All = new List<Lesson04aViewModel>
             {
-                new Lesson04aViewModel(typeof(PickerDemoPage), "Picker Examples",
-                        "Pick a value from Date, Time and Color"),
+                new Lesson04aViewModel(typeof(SettingValueDemoPage), "Setting and Getting Values Demo",
+                        "Set and get values from various UI elements"),
 
                 new Lesson04aViewModel(typeof(AlteringViewXamlPage), "Altering View",
                         "Alter view properties using XAML binding"),

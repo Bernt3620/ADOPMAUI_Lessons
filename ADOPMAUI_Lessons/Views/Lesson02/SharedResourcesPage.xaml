@@ -8,9 +8,9 @@
                        Alignment="Center" />
         <LayoutOptions x:Key="vertOptions"
                        Alignment="Center" />
-        <x:Double x:Key="borderWidth">3</x:Double>
-        <x:Double x:Key="rotationAngle">-15</x:Double>
-        <x:Double x:Key="fontSize">24</x:Double>
+        <x:Double x:Key="borderWidth">15</x:Double>
+        <x:Double x:Key="rotationAngle">-10</x:Double>
+        <x:Double x:Key="fontSize">12</x:Double>
         <OnPlatform x:Key="textColor"
                         x:TypeArguments="Color">
             <On Platform="iOS" Value="Red" />
@@ -19,7 +19,7 @@
     </ContentPage.Resources>
 
     <StackLayout>
-        <Button Text="Do this!"
+         <Button Text="Do this!"
                 HorizontalOptions="{StaticResource horzOptions}"
                 VerticalOptions="{StaticResource vertOptions}"
                 BorderWidth="{StaticResource borderWidth}"
