@@ -6,7 +6,6 @@
     <ContentPage.Content>
         <StackLayout Spacing="50">
             <StackLayout VerticalOptions="Start">
-                <Label x:Name="lblPageRoute" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
                 <Label Text="Data passed to page using Query parameters:" HorizontalOptions="Center"/>
                 <Label x:Name="lblMessage" HorizontalOptions="Center" />
                 <Label x:Name="lblTime" HorizontalOptions="Center" />

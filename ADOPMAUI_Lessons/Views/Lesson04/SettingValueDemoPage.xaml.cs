@@ -9,6 +9,13 @@ namespace ADOPMAUI_Lessons.Views.Lesson04
             InitializeComponent();
             picker.ItemsSource = Friend.Factory.CreateRandom(10);
         }
+        protected override void OnNavigatedTo(NavigatedToEventArgs args)
+        {
+            base.OnNavigatedTo(args);
+
+            //Routing of this page
+            Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+        }
         private void checkbox_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             if (e.PropertyName != "IsChecked") return;

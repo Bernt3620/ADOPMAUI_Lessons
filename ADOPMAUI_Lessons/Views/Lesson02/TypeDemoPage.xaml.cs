@@ -26,5 +26,12 @@ namespace ADOPMAUI_Lessons.Views.Lesson02
 
             BindingContext = this;
         }
+        protected override void OnNavigatedTo(NavigatedToEventArgs args)
+        {
+            base.OnNavigatedTo(args);
+
+            //Routing of this page
+            Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+        }
     }
 }

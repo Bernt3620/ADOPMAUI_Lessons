@@ -35,6 +35,11 @@ namespace ADOPMAUI_Lessons.ViewModels
                     new Lesson03aViewModel(typeof(GridLayout2), "GridLayout demo2",
                                       "GridLayout more advanced")
             };
+
+            foreach (var item in All)
+            {
+                Routing.RegisterRoute(item.Route, item.Type);
+            }
         }
 
         public static IList<Lesson03aViewModel> All { private set; get; }

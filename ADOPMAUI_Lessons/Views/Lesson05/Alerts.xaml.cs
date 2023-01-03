@@ -2,13 +2,13 @@ using Microsoft.Maui.Controls;
 
 namespace ADOPMAUI_Lessons.Views.Lesson05;
 
-//Data that is passed from ContentPage1 as querystring
-//Example of using QueryProperty attributes to map to public properties in ContentPage2
+//Data that is passed from Actions as querystring
+//Example of using QueryProperty attributes to map to public properties in Alerts
 [QueryProperty(nameof(time), "time")]
 [QueryProperty(nameof(message), "message")]
 public partial class Alerts : ContentPage
 {
-    //Data that is passed from ContentPage1 as querystring
+    //Data that is passed from Actions as querystring
     //Properties mapped from query parameters using QueryProperty above 
     public string time { get; set; }
     public string message { get; set; }
@@ -17,6 +17,13 @@ public partial class Alerts : ContentPage
 	{
 		InitializeComponent();
     }
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+    }
     protected override void OnAppearing()
     {
         //This is a safe time to initialize the page, e.g. use the data passed as a querystring
@@ -24,14 +31,6 @@ public partial class Alerts : ContentPage
         lblTime.Text = time;
 
         base.OnAppearing();
-    }
-
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
-    {
-        base.OnNavigatedTo(args);
-
-        //Routing of this page
-        lblPageRoute.Text = Shell.Current.CurrentState.Location.ToString();
     }
 
     async void OnAlertSimpleClicked(object sender, EventArgs e)
@@ -47,11 +46,11 @@ public partial class Alerts : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        //Pass data with QueryString to ContentPage2
+        //Pass data with QueryString to Alerts
         //Example using Dictionary to generate a querystring
         var queryParams = new Dictionary<string, object>();
 
-        queryParams.Add("message", $"{message}. Hello from {nameof(ContentPage2)}");
+        queryParams.Add("message", $"{message}. Hello from {nameof(Alerts)}");
         queryParams.Add("time", DateTime.Now);  //Note that I pass this as a DateTime not a string 
 
         await Shell.Current.GoToAsync("../prompts", queryParams);

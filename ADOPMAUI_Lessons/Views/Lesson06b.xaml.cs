@@ -17,7 +17,8 @@ namespace ADOPMAUI_Lessons.Views
             {
                 Lesson06bViewModel pageData = args.SelectedItem as Lesson06bViewModel;
                 Page page = (Page)Activator.CreateInstance(pageData.Type);
-                await Navigation.PushAsync(page);
+                //await Navigation.PushAsync(page);
+                await Shell.Current.GoToAsync(pageData.Route);
             }
         }
     }

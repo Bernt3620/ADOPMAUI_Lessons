@@ -13,8 +13,15 @@ namespace ADOPMAUI_Lessons.Views.Lesson03
 			status.Text = "the anchor point of a child is interpolated based on its position\n\n" +
 				"the white vertical line represents the X anchor point";
 		}
+        protected override void OnNavigatedTo(NavigatedToEventArgs args)
+        {
+            base.OnNavigatedTo(args);
 
-		public void HandlePosition(object sender, EventArgs e)
+            //Routing of this page
+            Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+        }
+
+        public void HandlePosition(object sender, EventArgs e)
 		{
 			UpdatePosition();
 		}

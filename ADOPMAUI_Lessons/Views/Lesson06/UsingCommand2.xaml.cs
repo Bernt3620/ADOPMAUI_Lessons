@@ -12,6 +12,13 @@ public partial class UsingCommand2 : ContentPage
         _viewmodel = new UsingCommand2ViewModel();
         this.BindingContext = _viewmodel;
     }
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+    }
     private async void lvFriends_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
         //Check that the selected item is not null

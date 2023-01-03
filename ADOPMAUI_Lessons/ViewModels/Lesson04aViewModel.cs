@@ -40,6 +40,11 @@ namespace ADOPMAUI_Lessons.ViewModels
                         "Group ListView using GroupHeaderTemplate and Linq"),
                
             };
+
+            foreach (var item in All)
+            {
+                Routing.RegisterRoute(item.Route, item.Type);
+            }
         }
 
         public static IList<Lesson04aViewModel> All { private set; get; }

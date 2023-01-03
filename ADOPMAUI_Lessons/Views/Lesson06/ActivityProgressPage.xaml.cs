@@ -10,6 +10,13 @@ public partial class ActivityProgressPage : ContentPage
 		InitializeComponent();
         UpdateUiState();
     }
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+    }
 
     async void OnButtonClicked(object sender, EventArgs e)
     {

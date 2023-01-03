@@ -6,7 +6,6 @@
     <ContentPage.Content>
         <StackLayout Spacing="50">
             <StackLayout VerticalOptions="Start">
-                <Label x:Name="lblPageRoute" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
                 <Label Text="Global data:" HorizontalOptions="Center"/>
                 <Label Text="{Binding message}" HorizontalOptions="Center" />
                 <Label Text="{Binding time}" HorizontalOptions="Center" />

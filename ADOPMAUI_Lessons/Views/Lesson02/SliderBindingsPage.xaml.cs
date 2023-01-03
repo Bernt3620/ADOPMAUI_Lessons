@@ -16,5 +16,10 @@
             //C# Binding alternative not using Binding Context
             lblDegree2.SetBinding(Label.TextProperty, new Binding(path:"Value", source:slider2, stringFormat: "The angle is {0:F0} degrees"));
         }
+        protected override void OnNavigatedTo(NavigatedToEventArgs args)
+        {
+            base.OnNavigatedTo(args);
+            Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+        }
     }
 }

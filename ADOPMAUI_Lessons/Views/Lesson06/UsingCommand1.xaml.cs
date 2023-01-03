@@ -13,6 +13,13 @@ public partial class UsingCommand1 : ContentPage
         _viewmodel = new UsingCommand1ViewModel();
         this.BindingContext = _viewmodel;
     }
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+    }
 
     public async void ButtonClicked(object sender, EventArgs args)
     {

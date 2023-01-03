@@ -20,6 +20,6 @@ public partial class TabbedColorPage : ContentPage
         base.OnNavigatedTo(args);
 
         //Routing of this page
-        lblPageRoute.Text = Shell.Current.CurrentState.Location.ToString();
+        Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
     }
 }

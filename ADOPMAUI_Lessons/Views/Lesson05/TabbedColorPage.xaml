@@ -15,7 +15,6 @@
     </ContentPage.Resources>
 
     <StackLayout Spacing="30">
-        <Label x:Name="lblPageRoute" HorizontalOptions="Center" VerticalOptions="Center" />
         <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
             <Label Text="{Binding FriendlyName}" />
             <Label Text="{Binding Red, StringFormat='R = {0:F2}'}" />

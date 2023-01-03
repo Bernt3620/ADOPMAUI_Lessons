@@ -25,13 +25,13 @@ namespace ADOPMAUI_Lessons.ViewModels
             All = new List<Lesson05aViewModel>
             {
                 new Lesson05aViewModel(typeof(Actions), "Actions",
-                        "Navigate to ContentPage1"),
+                        "Navigate to Actions page"),
 
                 new Lesson05aViewModel(typeof(Alerts), "Alerts",
-                        "Navigate to ContentPage2"),
+                        "Navigate to Alerts page"),
                 
                 new Lesson05aViewModel(typeof(Prompts), "Prompts",
-                        "Navigate to ContentPage3"),
+                        "Navigate to Prompts page"),
             };
 
             foreach (var item in All)

@@ -38,19 +38,19 @@
             <ShellContent
                 Title="ActivityIndicator and ProgressBar"
                 ContentTemplate="{DataTemplate views:Lesson06a}"
-                Route="activityindicators" />
+                Route="indicators" />
         </Tab>
         <Tab Title="Non trivial Databinding">
             <ShellContent
                 Title="Non trivial Databinding"
                 ContentTemplate="{DataTemplate views:Lesson06b}"
-                Route="nontrivialdatabinding" />
+                Route="nontrivialbinding" />
         </Tab>
         <Tab Title="Viewmodel using Command">
             <ShellContent
                 Title="Viewmodel using Command"
                 ContentTemplate="{DataTemplate views:Lesson06c}"
-                Route="viewmodelusingcommand" />
+                Route="viewmodels" />
         </Tab>
     </FlyoutItem>
 

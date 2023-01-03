@@ -67,12 +67,17 @@ namespace ADOPMAUI_Lessons.ViewModels
                 new Lesson02aViewModel(typeof(SliderTransformsPage), "Slider Transforms",
                                       "Use Sliders with bindings"),
 
-                 new Lesson02aViewModel(typeof(StringFormattingPage), "String Formatting",
+                 new Lesson02aViewModel(typeof(StringFormattingPage), "String Formatting1",
                                       "Use standard .NET formatting specfications"),
                  
-                 new Lesson02aViewModel(typeof(MultiBindingStringFormatPage), "String Formatting",
+                 new Lesson02aViewModel(typeof(MultiBindingStringFormatPage), "String Formatting2",
                                       "Combine strings from a MultiBinding"),
             };
+
+            foreach (var item in All)
+            {
+                Routing.RegisterRoute(item.Route, item.Type);
+            }
         }
 
         public static IList<Lesson02aViewModel> All { private set; get; }

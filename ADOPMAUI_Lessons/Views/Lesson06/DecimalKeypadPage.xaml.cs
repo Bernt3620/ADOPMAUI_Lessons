@@ -6,4 +6,11 @@ public partial class DecimalKeypadPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+    }
 }

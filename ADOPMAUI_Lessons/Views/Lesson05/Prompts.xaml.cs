@@ -2,7 +2,7 @@ namespace ADOPMAUI_Lessons.Views.Lesson05;
 
 public partial class Prompts : ContentPage, IQueryAttributable
 {
-    //Data that is passed from ContentPage2 as IDictionary<string, object>
+    //Data that is passed from Alerts as IDictionary<string, object>
     //Properties mapped from query parameters using IQueryAttributable implementation 
     public DateTime? time { get; set; }      //nullable DateTime struct in case no data is passed to page
     public string message { get; set; }
@@ -18,6 +18,13 @@ public partial class Prompts : ContentPage, IQueryAttributable
 	{
 		InitializeComponent();
     }
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+    }
 
     protected override void OnAppearing()
     {
@@ -27,13 +34,7 @@ public partial class Prompts : ContentPage, IQueryAttributable
 
         base.OnAppearing();
     }
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
-    {
-        base.OnNavigatedTo(args);
 
-        //Routing of this page
-        lblPageRoute.Text = Shell.Current.CurrentState.Location.ToString();
-    }
     async void OnQuestion1ButtonClicked(object sender, EventArgs e)
     {
         string result = await DisplayPromptAsync("Question 1", "What's your name?", initialValue: string.Empty);

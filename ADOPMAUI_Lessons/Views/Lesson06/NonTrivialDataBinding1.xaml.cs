@@ -15,6 +15,13 @@ public partial class NonTrivialDataBinding1 : ContentPage
         this.BindingContext = item;
 
     }
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+    }
     public async void ButtonClicked(object sender, EventArgs args)
     {
         await DisplayAlert("Values of Item", $"Message: {item.Message}\nCreation: {item.Creation:F}", "OK");

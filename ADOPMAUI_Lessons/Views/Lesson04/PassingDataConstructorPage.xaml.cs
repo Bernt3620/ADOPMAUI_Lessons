@@ -13,7 +13,14 @@ namespace ADOPMAUI_Lessons.Views.Lesson04
 		{
 			InitializeComponent();
 		}
-		public PassingDataConstructorPage(DateTime date, string greeting) : this()
+        protected override void OnNavigatedTo(NavigatedToEventArgs args)
+        {
+            base.OnNavigatedTo(args);
+
+            //Routing of this page
+            Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+        }
+        public PassingDataConstructorPage(DateTime date, string greeting) : this()
 		{
 			lblHello.Text = greeting;
 			lblDetails.Text = date.ToString();

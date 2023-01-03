@@ -9,6 +9,11 @@ namespace ADOPMAUI_Lessons.Views.Lesson03
 		{
 			InitializeComponent ();
 		}
+        protected override void OnNavigatedTo(NavigatedToEventArgs args)
+        {
+            base.OnNavigatedTo(args);
+            Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+        }
 	}
 }
 

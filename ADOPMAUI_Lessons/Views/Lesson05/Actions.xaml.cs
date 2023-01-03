@@ -26,7 +26,7 @@ public partial class Actions : ContentPage
         base.OnNavigatedTo(args);
 
         //Routing of this page
-        lblPageRoute.Text = Shell.Current.CurrentState.Location.ToString();
+        Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
     }
 
     async void OnActionSheetSimpleClicked(object sender, EventArgs e)
@@ -43,11 +43,11 @@ public partial class Actions : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        //Pass data with QueryString to ContentPage1
+        //Pass data with QueryString to Actions
         //Example using Dictionary to generate a querystring
         var queryParams = new Dictionary<string, object>();
-        queryParams.Add("message", $"{message}. Hello from {nameof(ContentPage1)}");
-        queryParams.Add("time", $"{time}. Hello from {nameof(ContentPage1)}");
+        queryParams.Add("message", $"{message}. Hello from {nameof(Alerts)}");
+        queryParams.Add("time", $"{time}. Hello from {nameof(Alerts)}");
 
         await Shell.Current.GoToAsync("../alerts", queryParams);
     }

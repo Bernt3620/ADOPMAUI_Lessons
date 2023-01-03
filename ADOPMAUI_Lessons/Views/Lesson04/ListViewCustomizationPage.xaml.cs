@@ -14,6 +14,13 @@ namespace ADOPMAUI_Lessons.Views.Lesson04
             //This is an alternative when binding ListView.ItemSource
             //lvFriends.BindingContext = Friend.Factory.CreateRandom(20);
         }
+        protected override void OnNavigatedTo(NavigatedToEventArgs args)
+        {
+            base.OnNavigatedTo(args);
+
+            //Routing of this page
+            Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
+        }
 
         private async void lvFriends_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
