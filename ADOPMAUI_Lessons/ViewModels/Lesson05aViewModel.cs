@@ -1,36 +1,43 @@
 ﻿using ADOPMAUI_Lessons.Views.Lesson05;
 using Microsoft.Maui.Controls;
+using System.Text.RegularExpressions;
 
 namespace ADOPMAUI_Lessons.ViewModels
 {
     public class Lesson05aViewModel
     {
-        public Lesson05aViewModel(Type type, string title, string description)
+        private static string RoutePrefix = "//lesson5/hierachial/";
+        public Type Type { private set; get; }
+        public string Title { private set; get; }
+        public string Description { private set; get; }
+        public string Route { private set; get; }
+
+        public Lesson05aViewModel(Type type, string title, string description, string route=null)
         {
             Type = type;
             Title = title;
             Description = description;
+            Route = route ?? RoutePrefix + Regex.Replace(title.ToLower(), @"\W", "");
         }
-
-        public Type Type { private set; get; }
-
-        public string Title { private set; get; }
-
-        public string Description { private set; get; }
 
         static Lesson05aViewModel()
         {
             All = new List<Lesson05aViewModel>
             {
-                new Lesson05aViewModel(typeof(ContentPage1), "ContentPage1",
+                new Lesson05aViewModel(typeof(Actions), "Actions",
                         "Navigate to ContentPage1"),
 
-                new Lesson05aViewModel(typeof(ContentPage2), "ContentPage2",
+                new Lesson05aViewModel(typeof(Alerts), "Alerts",
                         "Navigate to ContentPage2"),
                 
-                new Lesson05aViewModel(typeof(ContentPage3), "ContentPage3",
+                new Lesson05aViewModel(typeof(Prompts), "Prompts",
                         "Navigate to ContentPage3"),
             };
+
+            foreach (var item in All)
+            {
+                Routing.RegisterRoute(item.Route, item.Type);
+            }
         }
 
         public static IList<Lesson05aViewModel> All { private set; get; }

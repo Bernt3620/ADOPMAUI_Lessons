@@ -14,4 +14,12 @@ public partial class TabbedColorPage : ContentPage
 	{
 		this.BindingContext= color;
 	}
+
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        lblPageRoute.Text = Shell.Current.CurrentState.Location.ToString();
+    }
 }

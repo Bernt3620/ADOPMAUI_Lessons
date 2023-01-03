@@ -12,21 +12,7 @@ public partial class AppShell : Shell
     public AppShell()
 	{
 		InitializeComponent();
-        RegisterRoutes();
 	}
-
-    void RegisterRoutes()
-    {
-        //register the routes which are not specified in the AppShell.xaml
-        Routes.Add("actions", typeof(ContentPage1));
-        Routes.Add("alerts", typeof(ContentPage2));
-        Routes.Add("prompts", typeof(ContentPage3));
-
-        foreach (var item in Routes)
-        {
-            Routing.RegisterRoute(item.Key, item.Value);
-        }
-    }
 
     //alternative constructor to show parameter passing from App.xaml.cs
     public AppShell((DateTime date, string greeting) shellData) : this()
@@ -43,7 +29,7 @@ public partial class AppShell : Shell
         aTab.Items.Add(new ShellContent
         {
             Title = Colors[0].FriendlyName,
-            Route = Colors[0].FriendlyName,
+            Route = Colors[0].Name.ToLower(),
             ContentTemplate = new DataTemplate(() => new TabbedColorPage(Colors[0]))
         });
         flyLesson05.Items.Add(aTab);
@@ -52,7 +38,7 @@ public partial class AppShell : Shell
         aTab.Items.Add(new ShellContent
         {
             Title = Colors[1].FriendlyName,
-            Route = Colors[1].FriendlyName,
+            Route = Colors[1].Name.ToLower(),
             ContentTemplate = new DataTemplate(() => new TabbedColorPage(Colors[1]))
         });
         flyLesson05.Items.Add(aTab);
@@ -61,14 +47,9 @@ public partial class AppShell : Shell
         aTab.Items.Add(new ShellContent
         {
             Title = Colors[2].FriendlyName,
-            Route = Colors[2].FriendlyName,
+            Route = Colors[2].Name.ToLower(),
             ContentTemplate = new DataTemplate(() => new TabbedColorPage(Colors[2]))
         });
         flyLesson05.Items.Add(aTab);
-    }
-
-    protected override void OnNavigated(ShellNavigatedEventArgs args)
-    {
-        base.OnNavigated(args);
     }
 }

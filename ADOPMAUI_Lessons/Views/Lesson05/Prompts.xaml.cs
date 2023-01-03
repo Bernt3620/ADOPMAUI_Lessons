@@ -1,6 +1,6 @@
 namespace ADOPMAUI_Lessons.Views.Lesson05;
 
-public partial class ContentPage3 : ContentPage, IQueryAttributable
+public partial class Prompts : ContentPage, IQueryAttributable
 {
     //Data that is passed from ContentPage2 as IDictionary<string, object>
     //Properties mapped from query parameters using IQueryAttributable implementation 
@@ -14,10 +14,10 @@ public partial class ContentPage3 : ContentPage, IQueryAttributable
         message = query.ContainsKey("message") ? query["message"] as string : null;
     }
 
-    public ContentPage3()
+    public Prompts()
 	{
 		InitializeComponent();
-	}
+    }
 
     protected override void OnAppearing()
     {
@@ -27,7 +27,13 @@ public partial class ContentPage3 : ContentPage, IQueryAttributable
 
         base.OnAppearing();
     }
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
 
+        //Routing of this page
+        lblPageRoute.Text = Shell.Current.CurrentState.Location.ToString();
+    }
     async void OnQuestion1ButtonClicked(object sender, EventArgs e)
     {
         string result = await DisplayPromptAsync("Question 1", "What's your name?", initialValue: string.Empty);

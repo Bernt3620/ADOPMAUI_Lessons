@@ -133,13 +133,13 @@
 	  <MauiXaml Update="Views\Lesson04\ListViewDemoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson05\ContentPage1.xaml">
+	  <MauiXaml Update="Views\Lesson05\Actions.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson05\ContentPage2.xaml">
+	  <MauiXaml Update="Views\Lesson05\Alerts.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson05\ContentPage3.xaml">
+	  <MauiXaml Update="Views\Lesson05\Prompts.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson04\PassingDataConstructorPage.xaml">
@@ -204,6 +204,15 @@
 	  </Compile>
 	  <Compile Update="Views\Lesson04\SettingValueDemoPage.xaml.cs">
 	    <DependentUpon>SettingValueDemoPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson05\Actions.xaml.cs">
+	    <DependentUpon>Actions.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson05\Alerts.xaml.cs">
+	    <DependentUpon>Alerts.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson05\Prompts.xaml.cs">
+	    <DependentUpon>Prompts.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson06a.xaml.cs">
 	    <DependentUpon>Lesson06a.xaml</DependentUpon>

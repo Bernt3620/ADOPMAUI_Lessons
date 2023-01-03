@@ -14,11 +14,10 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <StackLayout>
-        <StackLayout HorizontalOptions="Center"
-                        VerticalOptions="CenterAndExpand">
-
-            <Label Text="{Binding Name}" />
+    <StackLayout Spacing="30">
+        <Label x:Name="lblPageRoute" HorizontalOptions="Center" VerticalOptions="Center" />
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+            <Label Text="{Binding FriendlyName}" />
             <Label Text="{Binding Red, StringFormat='R = {0:F2}'}" />
             <Label Text="{Binding Green, StringFormat='G = {0:F2}'}" />
             <Label Text="{Binding Blue, StringFormat='B = {0:F2}'}" />
@@ -29,12 +28,5 @@
                 HeightRequest="100"
                 HorizontalOptions="Center" />
 
-        <StackLayout HorizontalOptions="Center"
-                        VerticalOptions="CenterAndExpand">
-
-            <Label Text="{Binding Hue, StringFormat='Hue = {0:F2}'}" />
-            <Label Text="{Binding Saturation, StringFormat='Saturation = {0:F2}'}" />
-            <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}" />
-        </StackLayout>
     </StackLayout>
 </ContentPage>

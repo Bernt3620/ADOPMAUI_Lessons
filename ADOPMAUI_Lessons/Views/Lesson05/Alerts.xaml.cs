@@ -6,15 +6,14 @@ namespace ADOPMAUI_Lessons.Views.Lesson05;
 //Example of using QueryProperty attributes to map to public properties in ContentPage2
 [QueryProperty(nameof(time), "time")]
 [QueryProperty(nameof(message), "message")]
-public partial class ContentPage2 : ContentPage
+public partial class Alerts : ContentPage
 {
     //Data that is passed from ContentPage1 as querystring
     //Properties mapped from query parameters using QueryProperty above 
     public string time { get; set; }
     public string message { get; set; }
 
-
-    public ContentPage2()
+    public Alerts()
 	{
 		InitializeComponent();
     }
@@ -25,6 +24,14 @@ public partial class ContentPage2 : ContentPage
         lblTime.Text = time;
 
         base.OnAppearing();
+    }
+
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        lblPageRoute.Text = Shell.Current.CurrentState.Location.ToString();
     }
 
     async void OnAlertSimpleClicked(object sender, EventArgs e)

@@ -1,22 +1,24 @@
 ﻿using ADOPMAUI_Lessons.Views.Lesson04;
 using Microsoft.Maui.Controls;
+using System.Text.RegularExpressions;
 
 namespace ADOPMAUI_Lessons.ViewModels
 {
     public class Lesson04aViewModel
     {
-        public Lesson04aViewModel(Type type, string title, string description)
+        private static string RoutePrefix = "//lesson4/";
+        public Type Type { private set; get; }
+        public string Title { private set; get; }
+        public string Description { private set; get; }
+        public string Route { private set; get; }
+        
+        public Lesson04aViewModel(Type type, string title, string description, string route=null)
         {
             Type = type;
             Title = title;
             Description = description;
+            Route = route ?? RoutePrefix + Regex.Replace(title.ToLower(), @"\W", "");
         }
-
-        public Type Type { private set; get; }
-
-        public string Title { private set; get; }
-
-        public string Description { private set; get; }
 
         static Lesson04aViewModel()
         {

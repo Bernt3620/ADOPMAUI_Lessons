@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ADOPMAUI_Lessons.Views.Lesson05.ContentPage2"
-             Title="Display an Alert">
+             x:Class="ADOPMAUI_Lessons.Views.Lesson05.Prompts"
+             Title="Display a Prompt">
     <ContentPage.Content>
         <StackLayout Spacing="50">
             <StackLayout VerticalOptions="Start">
-                <Label Text="ContentPage2 data goes here" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-                <Label Text="Data passed to page using Query parameters:" HorizontalOptions="Center"/>
+                <Label x:Name="lblPageRoute" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                <Label Text="Data passed to page using IDictionary:" HorizontalOptions="Center"/>
                 <Label x:Name="lblMessage" HorizontalOptions="Center" />
                 <Label x:Name="lblTime" HorizontalOptions="Center" />
             </StackLayout>
             <Frame BorderColor="Black">
                 <StackLayout VerticalOptions="Center">
-                    <Label Text="Display Alert" FontSize="Large" HorizontalOptions="Center" />
+                    <Label Text="Display Prompt" FontSize="Large" HorizontalOptions="Center" />
                     <Label x:Name="lblAnswer" />
-                    <Button Text="Alert Simple" Clicked="OnAlertSimpleClicked" />
-                    <Button Text="Alert Yes/No" Clicked="OnAlertYesNoClicked" />
+                    <Button Text="Question 1" Clicked="OnQuestion1ButtonClicked" />
+                    <Button Text="Question 2" Clicked="OnQuestion2ButtonClicked" />
                 </StackLayout>
             </Frame>
             <Frame BorderColor="Black" BackgroundColor="LightYellow">
                 <StackLayout VerticalOptions="End">
-                    <Button Text="Prompts" Clicked="Button_Clicked" />
-                    <Button Text="Actions" Clicked="Button_Clicked_1" />
+                    <Button Text="Alerts" Clicked="Button_Clicked_1" />
                     <Button Text="Menu" Clicked="Button_Clicked_2" />
                 </StackLayout>
             </Frame>

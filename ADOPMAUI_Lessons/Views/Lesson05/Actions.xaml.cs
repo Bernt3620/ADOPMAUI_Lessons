@@ -3,12 +3,12 @@ using ADOPMAUI_Lessons.Globals;
 
 namespace ADOPMAUI_Lessons.Views.Lesson05;
 
-public partial class ContentPage1 : ContentPage
+public partial class Actions : ContentPage
 {
     public DateTime time { get; set; }
     public string message { get; set; }
 
-    public ContentPage1()
+    public Actions()
 	{
 		InitializeComponent();
 
@@ -18,10 +18,15 @@ public partial class ContentPage1 : ContentPage
         time = Global.Data.Time;
 
         this.BindingContext = this;
+
     }
-    protected override void OnAppearing()
+
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
-        base.OnAppearing();
+        base.OnNavigatedTo(args);
+
+        //Routing of this page
+        lblPageRoute.Text = Shell.Current.CurrentState.Location.ToString();
     }
 
     async void OnActionSheetSimpleClicked(object sender, EventArgs e)
