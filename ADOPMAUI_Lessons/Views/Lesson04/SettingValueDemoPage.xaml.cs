@@ -87,5 +87,22 @@ namespace ADOPMAUI_Lessons.Views.Lesson04
             var s = (Picker)sender;
             lblPropChanged.Text = $"Picker PropertyChanged: {s.SelectedIndex}";
         }
+
+        private void stepper_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            var s = (Stepper)sender;
+            lblOtherChanged.Text = $"Stepper ValueChanged: {s.Value}";
+        }
+
+        private void ContentPage_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName != "Width" && e.PropertyName != "Height") return;
+            if (lblPropChanged == null) return;
+
+            var s = (ContentPage)sender;
+            lblPropChanged.Text = $"Size changed: Width:{s.Width}, Height:{s.Height}";
+
+
+        }
     }
 }
