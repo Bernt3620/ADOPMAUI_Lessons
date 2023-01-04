@@ -55,17 +55,15 @@ namespace ADOPMAUI_Lessons.ViewModels
  
                 new Lesson02aViewModel(typeof(OnIdiomDemoPage), "OnIdiom Demo",
                         "Specify values per idiom"),
+                               
+                new Lesson02aViewModel(typeof(SliderBindingsPage1), "Slider Bindings1",
+                                      "Bind using Source={x:Reference Name="),
 
-              
-                new Lesson02aViewModel(typeof(SliderBindingsPage), "Slider Bindings1",
-                                      "Bind properties of two views on the page"),
-                
                 new Lesson02aViewModel(typeof(SliderBindingsPage2), "Slider Bindings2",
-                                      "Bind multiple properties"),
-
+                                      "Bind using BindingContext={x:Reference"),
 
                 new Lesson02aViewModel(typeof(SliderTransformsPage), "Slider Transforms",
-                                      "Use Sliders with bindings"),
+                                      "More advanced binding example"),
 
                  new Lesson02aViewModel(typeof(StringFormattingPage), "String Formatting1",
                                       "Use standard .NET formatting specfications"),

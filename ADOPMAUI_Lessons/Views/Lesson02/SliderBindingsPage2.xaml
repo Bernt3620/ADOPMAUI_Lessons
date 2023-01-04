@@ -3,39 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ADOPMAUI_Lessons.Views.Lesson02.SliderBindingsPage2"
              Title="Slider Bindings Page">
-    <StackLayout Padding="10, 0">
-        <Label Text="Label with basic binding in XAML"
-               FontSize="30"
+    <StackLayout>
+        <Frame BackgroundColor="LightGrey">
+        <StackLayout>
+            <Label Text="XAML Binding"/>
+            <Label Text="ROTATION"
+               BindingContext="{x:Reference slider}"
+               Rotation="{Binding Path=Value}"
+               FontAttributes="Bold"
+               FontSize="20"
                HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand"
-               Rotation="{Binding Source={x:Reference Name=slider1a}, Path=Value}"
-               Scale="{Binding Source={x:Reference Name=slider1b}, Path=Value}"
-               Opacity="{Binding Source={x:Reference Name=slider1c}, Path=Value}"/>
-
-        <Slider x:Name="slider1a"
-                Maximum="360"
-                VerticalOptions="CenterAndExpand" />
-        <Slider x:Name="slider1b"
-                Maximum="1"
-                VerticalOptions="CenterAndExpand" Value="1"/>
-        <Slider x:Name="slider1c"
-                Maximum="1"
-                VerticalOptions="CenterAndExpand" Value="1" />
-
-        <Label x:Name="label2" Text="Label with basic binding in C#"
-               FontSize="30"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand"/>
-
-        <Slider x:Name="slider2a"
-                Maximum="360"
-                VerticalOptions="CenterAndExpand" />
-        <Slider x:Name="slider2b"
-                Maximum="1"
-                VerticalOptions="CenterAndExpand" Value="1"/>
-        <Slider x:Name="slider2c"
-                Maximum="1"
-                VerticalOptions="CenterAndExpand" Value="1" />
-
+               VerticalOptions="Center" />
+            <Slider x:Name="slider"
+                    Maximum="360"
+                    VerticalOptions="Center"
+                    Margin="20,0,20,0" />
+            <Label BindingContext="{x:Reference slider}"
+                    Text="{Binding Value, StringFormat='The angle is {0:F1} degrees'}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="LightGrey">
+            <StackLayout>
+                <Label Text="C# Binding"/>
+                <Label x:Name="lblRotation" Text="ROTATION"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Slider x:Name="slider2"
+                        Maximum="360"
+                        VerticalOptions="Center"
+                        Margin="20,0,20,0" />
+                <Label x:Name="lblDegree1" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                <Label x:Name="lblDegree2" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
     </StackLayout>
 </ContentPage>

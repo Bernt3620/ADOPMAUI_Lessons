@@ -6,9 +6,15 @@
         {
             InitializeComponent();
 
-            label2.SetBinding(Label.RotationProperty, new Binding("Value", source: slider2a));
-            label2.SetBinding(Label.ScaleProperty, new Binding("Value", source: slider2b));
-            label2.SetBinding(Label.OpacityProperty, new Binding("Value", source: slider2c));
+            //C# Binding using BindingContext
+            lblRotation.BindingContext = slider2;
+            lblRotation.SetBinding(Label.RotationProperty, "Value");
+
+            lblDegree1.BindingContext = slider2;
+            lblDegree1.SetBinding(targetProperty:Label.TextProperty, path:"Value", stringFormat: "The angle is {0:F0} degrees");
+
+            //C# Binding alternative not using Binding Context
+            lblDegree2.SetBinding(Label.TextProperty, new Binding(path:"Value", source:slider2, stringFormat: "The angle is {0:F0} degrees"));
         }
         protected override void OnNavigatedTo(NavigatedToEventArgs args)
         {
