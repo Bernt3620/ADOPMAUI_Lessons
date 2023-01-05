@@ -42,7 +42,7 @@ namespace ADOPMAUI_Lessons.Views.Lesson04
         private async void MenuItem_Clicked(object sender, EventArgs e)
         {
             var mi = (MenuItem)sender;
-            var item = ((Friend)mi.CommandParameter);
+            var item = (Friend)mi.CommandParameter;
 
             await DisplayAlert("Menu Clicked", $"Invite {item.FirstName} to your party!", "Got it!");
 
@@ -52,7 +52,7 @@ namespace ADOPMAUI_Lessons.Views.Lesson04
         private async void MenuItem_Clicked_1(object sender, EventArgs e)
         {
             var mi = (MenuItem)sender;
-            var item = ((Friend)mi.CommandParameter);
+            var item = (Friend)mi.CommandParameter;
 
             await DisplayAlert("Menu Clicked", $"Send a gift to {item.FirstName}!", "Got it!");
         }
