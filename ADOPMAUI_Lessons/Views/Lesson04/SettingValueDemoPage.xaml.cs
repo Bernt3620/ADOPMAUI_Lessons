@@ -90,8 +90,8 @@ namespace ADOPMAUI_Lessons.Views.Lesson04
 
         private void stepper_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            var s = (Stepper)sender;
-            lblOtherChanged.Text = $"Stepper ValueChanged: {s.Value}";
+            //var s = (Stepper)sender;
+            lblOtherChanged.Text = $"Stepper ValueChanged: NewValue: {e.NewValue}, OldValue:{e.OldValue}";
         }
 
         private void ContentPage_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
