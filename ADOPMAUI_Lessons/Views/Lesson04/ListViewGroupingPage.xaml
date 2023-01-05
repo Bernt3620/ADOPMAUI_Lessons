@@ -13,7 +13,7 @@
         <ListView Margin="10, 0" x:Name="lvFriends" Header="My friends" Footer="That's it" ItemsSource="{Binding .}">
         -->
 
-        <ListView Margin="10, 0" x:Name="lvFriends" Header="My friends" Footer="That's it" IsGroupingEnabled="true" 
+        <ListView Margin="10, 0" x:Name="lvFriends" Header="My friends" Footer="That's it" IsGroupingEnabled="True" 
                   ItemSelected="lvFriends_ItemSelected">
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>

@@ -11,7 +11,14 @@ namespace ADOPMAUI_Lessons.Views.Lesson04
             InitializeComponent();
 
             //Do Grouping is very easy with Linq - Keep the grouped list as an IEnumerable
-            lvFriends.ItemsSource = Friend.Factory.CreateRandom(20).OrderByDescending(f => f.Birthday).GroupBy(f => f.Birthday.Year); 
+
+            var ungrouped = Friend.Factory.CreateRandom(20);
+            //For ungrouped do not forget to set the ListViews IsGroupingEnabled=false either in C# or in Xaml
+            //lvFriends.ItemsSource = ungrouped;
+
+            //For grouped do not forget to set the ListViews IsGroupingEnabled=true either in C# or in Xaml
+            var grouped = ungrouped.OrderByDescending(f => f.Birthday).GroupBy(f => f.Birthday.Year);
+            lvFriends.ItemsSource = grouped;
 
 
             //This is an alternative when binding ListView.ItemSource

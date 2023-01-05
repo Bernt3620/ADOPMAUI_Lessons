@@ -38,7 +38,10 @@ namespace ADOPMAUI_Lessons.ViewModels
                 
                 new Lesson04aViewModel(typeof(ListViewGroupingPage), "ListView Grouping",
                         "Group ListView using GroupHeaderTemplate and Linq"),
-               
+
+                new Lesson04aViewModel(typeof(ApplicationState), "Application State Management",
+                        "Read the Application global variables set in App.xaml.cs"),
+                
             };
 
             foreach (var item in All)

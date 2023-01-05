@@ -142,7 +142,7 @@
 	  <MauiXaml Update="Views\Lesson05\Prompts.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson04\PassingDataConstructorPage.xaml">
+	  <MauiXaml Update="Views\Lesson04\ApplicationState.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson04\AlteringViewXamlPage.xaml">
@@ -232,8 +232,8 @@
 	  <Compile Update="Views\Lesson04\ListViewCustomizationPage.xaml.cs">
 	    <DependentUpon>ListViewCustomizationPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Lesson04\PassingDataConstructorPage.xaml.cs">
-	    <DependentUpon>PassingDataConstructorPage.xaml</DependentUpon>
+	  <Compile Update="Views\Lesson04\ApplicationState.xaml.cs">
+	    <DependentUpon>ApplicationState.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson04\AlteringViewXamlPage.xaml.cs">
 	    <DependentUpon>AlteringViewXamlPage.xaml</DependentUpon>
