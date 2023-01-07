@@ -5,14 +5,14 @@ namespace ADOPMAUI_Lessons.Views.Lesson06;
 public partial class NonTrivialDataBinding3 : ContentPage
 {
 
-    private ItemC _viewModel;  //ItemC is ItemB with INotifyChange in inherited BaseViewModel
+    private ItemC_AsViewModel _viewModel;  //ItemC is ItemB with INotifyChange in inherited BaseViewModel
 
     Random rnd;
 
     public NonTrivialDataBinding3()
 	{
 		InitializeComponent();
-        this.BindingContext = _viewModel = new ItemC();
+        this.BindingContext = _viewModel = new ItemC_AsViewModel();
 
         rnd = new Random();
     }

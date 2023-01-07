@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ADOPMAUI_Lessons.ViewModels
 {
     #region ItemC is ItemB with INotifyChange in inherited BaseViewModel
-    public class ItemC : BaseViewModel
+    public class ItemC_AsViewModel : BaseViewModel
     {
         string _message;
         public string Message
@@ -23,7 +23,7 @@ namespace ADOPMAUI_Lessons.ViewModels
             get => _creation;
         }
 
-        public ItemC()
+        public ItemC_AsViewModel()
         {
             Message = "A message from item";
             Creation = DateTime.Now;

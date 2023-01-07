@@ -49,7 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\Lesson03a.xaml">
+	  <MauiXaml Update="Views\ShellMenuCreation\Lesson03a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson02\SliderBindingsPage1.xaml">
@@ -73,16 +73,16 @@
 	  <MauiXaml Update="Views\Lesson04\SettingValueDemoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson06a.xaml">
+	  <MauiXaml Update="Views\ShellMenuCreation\Lesson06a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson05a.xaml">
+	  <MauiXaml Update="Views\ShellMenuCreation\Lesson05a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson04a.xaml">
+	  <MauiXaml Update="Views\ShellMenuCreation\Lesson04a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson02a.xaml">
+	  <MauiXaml Update="Views\ShellMenuCreation\Lesson02a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson02\GridDemoPage.xaml">
@@ -151,7 +151,7 @@
 	  <MauiXaml Update="Views\Lesson05\TabbedColorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson06c.xaml">
+	  <MauiXaml Update="Views\ShellMenuCreation\Lesson06c.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson06\ActivityProgressPage.xaml">
@@ -181,10 +181,10 @@
 	  <Compile Update="Views\Lesson02\SliderBindingsPage2.xaml.cs">
 	    <DependentUpon>SliderBindingsPage2.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Lesson03a.xaml.cs">
+	  <Compile Update="Views\ShellMenuCreation\Lesson03a.xaml.cs">
 	    <DependentUpon>Lesson03a.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Lesson02a.xaml.cs">
+	  <Compile Update="Views\ShellMenuCreation\Lesson02a.xaml.cs">
 	    <DependentUpon>Lesson02a.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson02\SliderBindingsPage1.xaml.cs">
@@ -217,13 +217,13 @@
 	  <Compile Update="Views\Lesson05\Prompts.xaml.cs">
 	    <DependentUpon>Prompts.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Lesson06a.xaml.cs">
+	  <Compile Update="Views\ShellMenuCreation\Lesson06a.xaml.cs">
 	    <DependentUpon>Lesson06a.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Lesson05a.xaml.cs">
+	  <Compile Update="Views\ShellMenuCreation\Lesson05a.xaml.cs">
 	    <DependentUpon>Lesson05a.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Lesson04a.xaml.cs">
+	  <Compile Update="Views\ShellMenuCreation\Lesson04a.xaml.cs">
 	    <DependentUpon>Lesson04a.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson04\ListViewGroupingPage.xaml.cs">
@@ -241,7 +241,7 @@
 	  <Compile Update="Views\Lesson05\TabbedColorPage.xaml.cs">
 	    <DependentUpon>TabbedColorPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Lesson06c.xaml.cs">
+	  <Compile Update="Views\ShellMenuCreation\Lesson06c.xaml.cs">
 	    <DependentUpon>Lesson06c.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Lesson06\UsingCommand2.xaml.cs">
