@@ -9,28 +9,26 @@ using ADOPMAUI_Lessons.Models;
 
 namespace ADOPMAUI_Lessons.Views.Lesson07
 {
-    public partial class PrimesPage2 : ContentPage
+    [QueryProperty(nameof(NrBatches), "NrBatches")]
+
+    public partial class PrimesAppStep2 : ContentPage
     {
+        public string NrBatches { get; set; }
         public List<PrimeBatch> Primes { get; private set; }
+
         PrimeNumberService _service;
-        public PrimesPage2()
+        public PrimesAppStep2()
         {
             InitializeComponent();
             _service = new PrimeNumberService();
-            BindingContext = this;
 
-        }
-        public PrimesPage2(int NrBatches) : this()
-        {
-            enNrBatches.Text = NrBatches.ToString();
+            BindingContext = this;
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            //Code here will run right before the screen appears
-            //You want to set the Title or set the City
+            enNrBatches.Text = NrBatches;
 
             //This is making the first load of data
             MainThread.BeginInvokeOnMainThread(async () => { await LoadPrimes(); });
@@ -50,3 +48,16 @@ namespace ADOPMAUI_Lessons.Views.Lesson07
         }
     }
 }
+/* Primes Application Step2 - Query parameters to initiate page. BindingContext set to page class. OnAppearing to load primes
+
+- Initial Batch size is set using QueryParams //lesson7/primesapplicationstep2?NrBatches=10
+- QueryParams read in cs file using [QueryProperty(nameof(NrBatches), "NrBatches")]
+
+- public List<PrimeBatch> Primes { get; private set; } creates and ListView.ItemSource Bound to Primes
+- BindingContext set to this
+
+- protected override void OnAppearing() created to initiate page when about to be rendered 
+- private async Task LoadPrimes() created and called from OnAppearing to make initial primes calculation
+- OnPropertyChanged("Primes") used to update DataBinding when new primes calculation made
+
+*/

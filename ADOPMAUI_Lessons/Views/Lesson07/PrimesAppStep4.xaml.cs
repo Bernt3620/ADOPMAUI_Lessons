@@ -10,34 +10,32 @@ using ADOPMAUI_Lessons.Services;
 
 namespace ADOPMAUI_Lessons.Views.Lesson07
 {
-    public partial class PrimesPage4 : ContentPage
+    [QueryProperty(nameof(NrBatches), "NrBatches")]
+    public partial class PrimesAppStep4 : ContentPage
     {
+        public string NrBatches { get; set; }
         public List<PrimeBatch> Primes { get; private set; }
+
         PrimeNumberService _service;
         Progress<float> _progressReporter;
 
-        public PrimesPage4()
+        public PrimesAppStep4()
         {
             InitializeComponent();
             _service = new PrimeNumberService();
             BindingContext = this;
 
-            _progressReporter = new Progress<float>(value =>
+            _progressReporter = new Progress<float>(async value =>
             {
-                progressBar.Progress = value;
+                await progressBar.ProgressTo(value, 750, Easing.Linear);
             });
-        }
-        public PrimesPage4(int NrBatches) : this()
-        {
-            enNrBatches.Text = NrBatches.ToString();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            //Code here will run right before the screen appears
-            //You want to set the Title or set the City
+            enNrBatches.Text = NrBatches;
 
             //This is making the first load of data
             MainThread.BeginInvokeOnMainThread(async () => { await LoadPrimes(); });
@@ -52,18 +50,18 @@ namespace ADOPMAUI_Lessons.Views.Lesson07
         {
             if (!int.TryParse(enNrBatches.Text, out int nrbatches)) return;
 
-            lvPrimes.IsVisible = false;
-            progressBar.IsVisible = true;
-            activityIndicator.IsVisible = true;
-            activityIndicator.IsRunning = true;
+            progressBar.Progress = 0;
 
-            lvPrimes.ItemsSource = await _service.GetPrimeBatchCountsAsync(nrbatches, _progressReporter);
+            layBusy.IsVisible = true;
+            activityIndicator.IsRunning = true;
+            lvPrimes.IsVisible = false;
+
+            Primes = await _service.GetPrimeBatchCountsAsync(nrbatches, _progressReporter);
             OnPropertyChanged("Primes");
 
-            activityIndicator.IsRunning = false;
-            activityIndicator.IsVisible = false;
-            progressBar.IsVisible = false;
             lvPrimes.IsVisible = true;
+            activityIndicator.IsRunning = false;
+            layBusy.IsVisible = false;
         }
 
         private async void lvPrimes_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -113,10 +111,25 @@ namespace ADOPMAUI_Lessons.Views.Lesson07
         }
         static string fname(string name)
         {
-            var documentPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            documentPath = System.IO.Path.Combine(documentPath, "AOOP2", "Examples");
+            //var documentPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
+            //Note: MAUI has changed storage policy to use FileSystem.Current.AppDataDirectory
+            //instead of Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
+            var documentPath = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, "PrimesAppStep4", "Primes");
             if (!Directory.Exists(documentPath)) Directory.CreateDirectory(documentPath);
             return System.IO.Path.Combine(documentPath, name);
         }
     }
 }
+/* Primes Application Step4 - Adding TappedItem eventhandler, AlertBox and Write all primes to disk
+
+- lvPrimes_ItemTapped eventhadler added to the ListView
+- DisplayAlert used to ask if a PrimeBatch should be written to disk
+- fname created to create a platform independant filepath
+- WriteAsync created to get the primes from the batch and write to disk. All async
+
+Note: MAUI has changed disk storage policy to use FileSystem.Current.AppDataDirectory instead of
+Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
+*/

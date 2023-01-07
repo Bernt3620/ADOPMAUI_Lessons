@@ -26,6 +26,19 @@ namespace ADOPMAUI_Lessons.ViewModels
             {
                 new Lesson07aViewModel(typeof(PrimesAppStep1), "Primes Application Step1",
                         "Very basic. Moving Model and Services into MAUI"),
+                
+                new Lesson07aViewModel(typeof(PrimesAppStep2), "Primes Application Step2",
+                        "Query parameters to initiate page. BindingContext set to page class. OnAppearing to load primes",
+                        "//lesson7/primesapplicationstep2?NrBatches=10"),
+
+                new Lesson07aViewModel(typeof(PrimesAppStep3), "Primes Application Step3",
+                        "Adding ProgressBar and ActivityIndicator",
+                        "//lesson7/primesapplicationstep3?NrBatches=10"),
+                
+                new Lesson07aViewModel(typeof(PrimesAppStep4), "Primes Application Step4",
+                        "Adding TappedItem eventhandler, AlertBox and Write all primes to disk",
+                        "//lesson7/primesapplicationstep4?NrBatches=10"),
+
             };
 
             foreach (var item in All)
