@@ -10,20 +10,20 @@
                 <Label Text="{Binding message}" HorizontalOptions="Center" />
                 <Label Text="{Binding time}" HorizontalOptions="Center" />
             </StackLayout>
-            <Frame BorderColor="Black">
+            <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4">
                 <StackLayout VerticalOptions="Center">
                     <Label Text="Action Sheet" FontSize="Large" HorizontalOptions="Center" />
                     <Label x:Name="lblAnswer" Text="Action Answer"/>
                     <Button Text="ActionSheet Simple" Clicked="OnActionSheetSimpleClicked" />
                     <Button Text="ActionSheet Cancel/Delete" Clicked="OnActionSheetCancelDeleteClicked" />
                 </StackLayout>
-            </Frame>
-            <Frame BorderColor="Black" BackgroundColor="LightYellow">
+            </Border>
+            <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" BackgroundColor="LightGrey">
                 <StackLayout VerticalOptions="End">
                     <Button Text="Alerts" Clicked="Button_Clicked" />
                     <Button Text="Menu" Clicked="Button_Clicked_1" />
                 </StackLayout>
-            </Frame>
+            </Border>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

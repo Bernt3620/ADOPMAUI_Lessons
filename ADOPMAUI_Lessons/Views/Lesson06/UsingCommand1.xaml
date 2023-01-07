@@ -4,7 +4,7 @@
              x:Class="ADOPMAUI_Lessons.Views.Lesson06.UsingCommand1"
              Title="UsingCommand1">
     <VerticalStackLayout>
-        <Frame x:Name="lblHello" BorderColor="Black">
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4">
             <StackLayout>
                 <Label Text="Using Command 1- Full ViewModel" HorizontalOptions="CenterAndExpand" FontSize="25"/>
                 <Grid>
@@ -30,6 +30,6 @@
                 <Button Text="Change the properties of item in C# code" 
                         Command="{Binding ChangeValueCommand}" CommandParameter ="Optional Command Parameter" />
             </StackLayout>
-        </Frame>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>

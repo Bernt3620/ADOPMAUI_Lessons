@@ -10,20 +10,20 @@
                 <Label x:Name="lblMessage" HorizontalOptions="Center" />
                 <Label x:Name="lblTime" HorizontalOptions="Center" />
             </StackLayout>
-            <Frame BorderColor="Black">
+            <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4">
                 <StackLayout VerticalOptions="Center">
                     <Label Text="Display Prompt" FontSize="Large" HorizontalOptions="Center" />
                     <Label x:Name="lblAnswer" />
                     <Button Text="Question 1" Clicked="OnQuestion1ButtonClicked" />
                     <Button Text="Question 2" Clicked="OnQuestion2ButtonClicked" />
                 </StackLayout>
-            </Frame>
-            <Frame BorderColor="Black" BackgroundColor="LightYellow">
+            </Border>
+            <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" BackgroundColor="LightGrey">
                 <StackLayout VerticalOptions="End">
                     <Button Text="Alerts" Clicked="Button_Clicked_1" />
                     <Button Text="Menu" Clicked="Button_Clicked_2" />
                 </StackLayout>
-            </Frame>
+            </Border>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

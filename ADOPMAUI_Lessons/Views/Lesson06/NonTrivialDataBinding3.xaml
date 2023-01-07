@@ -4,7 +4,7 @@
              x:Class="ADOPMAUI_Lessons.Views.Lesson06.NonTrivialDataBinding3"
              Title="NonTrivialDataBinding3">
     <VerticalStackLayout>
-        <Frame x:Name="lblHello" BorderColor="Black">
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4">
             <StackLayout>
                 <Label Text="Non-Trivial Binding3 - Implementing INotifyChange in BaseViewModel" HorizontalOptions="CenterAndExpand" FontSize="25"/>
                 <Grid>
@@ -26,6 +26,6 @@
                 <Button Text="Checkout the properties of item, to which the UI elements are Bound" Clicked="ButtonClicked" />
                 <Button Text="Change the properties of item in C# code" Clicked="Button_Clicked_1" />
             </StackLayout>
-        </Frame>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>

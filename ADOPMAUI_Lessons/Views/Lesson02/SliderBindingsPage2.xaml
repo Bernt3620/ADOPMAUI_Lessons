@@ -4,8 +4,8 @@
              x:Class="ADOPMAUI_Lessons.Views.Lesson02.SliderBindingsPage2"
              Title="Slider Bindings Page">
     <StackLayout>
-        <Frame BackgroundColor="LightGrey">
-        <StackLayout>
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" BackgroundColor="LightGrey">
+            <StackLayout>
             <Label Text="XAML Binding"/>
             <Label Text="ROTATION"
                BindingContext="{x:Reference slider}"
@@ -23,8 +23,8 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center" />
             </StackLayout>
-        </Frame>
-        <Frame BackgroundColor="LightGrey">
+        </Border>
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" BackgroundColor="LightGrey">
             <StackLayout>
                 <Label Text="C# Binding"/>
                 <Label x:Name="lblRotation" Text="ROTATION"
@@ -43,6 +43,6 @@
                         HorizontalOptions="Center"
                         VerticalOptions="Center" />
             </StackLayout>
-        </Frame>
+        </Border>
     </StackLayout>
 </ContentPage>
