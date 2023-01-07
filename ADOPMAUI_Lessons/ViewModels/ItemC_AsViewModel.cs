@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ADOPMAUI_Lessons.ViewModels
 {
-    #region ItemC is ItemB with INotifyChange in inherited BaseViewModel
+    #region ItemC_AsViewModel is ItemB with INotifyChange in inherited BaseViewModel
     public class ItemC_AsViewModel : BaseViewModel
     {
         string _message;

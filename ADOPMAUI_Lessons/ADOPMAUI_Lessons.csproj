@@ -49,6 +49,30 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Lesson07\PrimesAppStep1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson07\PrimesPage2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson07\PrimesPage3.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson07\PrimesPage4.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson07\PrimesPage5vm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson07\PrimesPage6vm .xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson07\PrimesPage7vm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson07\PrimesPage8vm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ShellMenuCreation\Lesson03a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -151,6 +175,9 @@
 	  <MauiXaml Update="Views\Lesson05\TabbedColorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\ShellMenuCreation\Lesson07a.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ShellMenuCreation\Lesson06c.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -180,6 +207,9 @@
 	<ItemGroup>
 	  <Compile Update="Views\Lesson02\SliderBindingsPage2.xaml.cs">
 	    <DependentUpon>SliderBindingsPage2.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson07\PrimesAppStep1.xaml.cs">
+	    <DependentUpon>PrimesAppStep1.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\ShellMenuCreation\Lesson03a.xaml.cs">
 	    <DependentUpon>Lesson03a.xaml</DependentUpon>
@@ -240,6 +270,9 @@
 	  </Compile>
 	  <Compile Update="Views\Lesson05\TabbedColorPage.xaml.cs">
 	    <DependentUpon>TabbedColorPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ShellMenuCreation\Lesson07a.xaml.cs">
+	    <DependentUpon>Lesson07a.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\ShellMenuCreation\Lesson06c.xaml.cs">
 	    <DependentUpon>Lesson06c.xaml</DependentUpon>

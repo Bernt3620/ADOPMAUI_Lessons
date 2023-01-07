@@ -54,5 +54,9 @@
                 Route="viewmodels" />
         </Tab>
     </FlyoutItem>
+    <ShellContent
+    Title="Lesson 7"
+    ContentTemplate="{DataTemplate views:Lesson07a}"
+    Route="lesson7" />
 
 </Shell>
