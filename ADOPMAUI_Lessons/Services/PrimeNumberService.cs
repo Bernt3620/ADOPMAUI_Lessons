@@ -8,7 +8,7 @@ using ADOPMAUI_Lessons.Models;
 
 namespace ADOPMAUI_Lessons.Services
 {
-    public class PrimeNumberService : IPrimeNumerService  //IPrimeNumerService is used for Dependecy Injection
+    public class PrimeNumberService : IPrimeNumberService  //IPrimeNumberService is used for Dependecy Injection
     {
         public Task<List<PrimeBatch>> GetPrimeBatchCountsAsync(int NrOfBatches) => GetPrimeBatchCountsAsync(NrOfBatches, null);
         public Task<List<PrimeBatch>> GetPrimeBatchCountsAsync(int NrOfBatches, IProgress<float> onProgressReporting)

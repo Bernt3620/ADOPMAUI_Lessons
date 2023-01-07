@@ -8,7 +8,7 @@ using ADOPMAUI_Lessons.Models;
 namespace ADOPMAUI_Lessons.Services
 {
     //IPrimeNumerService is used only for DI
-    public interface IPrimeNumerService
+    public interface IPrimeNumberService
     {
         Task<List<PrimeBatch>> GetPrimeBatchCountsAsync(int NrOfBatches);
         Task<List<PrimeBatch>> GetPrimeBatchCountsAsync(int NrOfBatches, IProgress<float> onProgressReporting);

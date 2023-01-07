@@ -7,24 +7,31 @@ using ADOPMAUI_Lessons.ViewModels;
 
 namespace ADOPMAUI_Lessons.Views.Lesson07
 {
-    public partial class PrimesPage8vm : ContentPage
+    [QueryProperty(nameof(NrBatches), "NrBatches")]
+
+    public partial class PrimesAppStep5 : ContentPage
     {
-        PrimePageViewModel viewmodel => BindingContext as PrimePageViewModel;
-        public PrimesPage8vm()
+        public string NrBatches { get; set; }
+
+        private PrimePageViewModel _viewModel;
+        public PrimesAppStep5()
         {
             InitializeComponent();
-            BindingContext = new PrimePageViewModel(DependencyService.Get<IPrimeNumerService>());
-        }
-        public PrimesPage8vm(int NrOfBatches) : this()
-        {
-            viewmodel.NrOfBatches = NrOfBatches;
+            //BindingContext = _viewModel =  PrimePageViewModel(DependencyService.Get<IPrimeNumerService>());
+
+            BindingContext = _viewModel = new PrimePageViewModel(new PrimeNumberService());
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            MainThread.BeginInvokeOnMainThread(async () => { await viewmodel.LoadPrimes(); });
+            int nrbatches;
+            if (int.TryParse(NrBatches, out nrbatches))
+            {
+                _viewModel.NrOfBatches = nrbatches;
+                MainThread.BeginInvokeOnMainThread(async () => { await _viewModel.LoadPrimes(progressBar); });
+            }
         }
 
         private async void lvPrimes_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -37,7 +44,7 @@ namespace ADOPMAUI_Lessons.Views.Lesson07
                 string userMessage = null, path = null;
                 try
                 {
-                    path = await viewmodel.WriteAsync(item, $"Primes_from_{item.BatchStart}_to_{item.BatchEnd}.txt");
+                    path = await _viewModel.WriteAsync(item, $"Primes_from_{item.BatchStart}_to_{item.BatchEnd}.txt");
                     userMessage = "Write Completed";
                 }
                 catch (Exception ex)

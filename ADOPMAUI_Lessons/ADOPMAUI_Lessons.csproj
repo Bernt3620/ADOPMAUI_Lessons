@@ -61,16 +61,7 @@
 	  <MauiXaml Update="Views\Lesson07\PrimesAppStep4.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson07\PrimesPage5vm.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson07\PrimesPage6vm .xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson07\PrimesPage7vm.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Lesson07\PrimesPage8vm.xaml">
+	  <MauiXaml Update="Views\Lesson07\PrimesAppStep5.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ShellMenuCreation\Lesson03a.xaml">
@@ -219,6 +210,9 @@
 	  </Compile>
 	  <Compile Update="Views\Lesson07\PrimesAppStep4.xaml.cs">
 	    <DependentUpon>PrimesAppStep4.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Lesson07\PrimesAppStep5.xaml.cs">
+	    <DependentUpon>PrimesAppStep5.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\ShellMenuCreation\Lesson03a.xaml.cs">
 	    <DependentUpon>Lesson03a.xaml</DependentUpon>

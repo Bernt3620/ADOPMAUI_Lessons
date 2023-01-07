@@ -23,7 +23,7 @@ namespace ADOPMAUI_Lessons.ViewModels
         #endregion
 
         #region Step6
-        IPrimeNumerService _service;
+        IPrimeNumberService _service;
         List<PrimeBatch> _primes;
         public List<PrimeBatch> Primes
         {
@@ -31,7 +31,7 @@ namespace ADOPMAUI_Lessons.ViewModels
             get => _primes;
         }
 
-        public PrimePageViewModel(IPrimeNumerService primesService)
+        public PrimePageViewModel(IPrimeNumberService primesService)
         {
             _service = primesService;
         }
@@ -47,9 +47,9 @@ namespace ADOPMAUI_Lessons.ViewModels
 
         public async Task LoadPrimes(ProgressBar pb)
         {
-            Progress<float> progressReporter = new Progress<float>(value =>
+            Progress<float> progressReporter = new Progress<float>(async value =>
             {
-                pb.Progress = value;
+                await pb.ProgressTo(value, 750, Easing.Linear);
             });
 
             pb.IsVisible = true;
@@ -84,7 +84,12 @@ namespace ADOPMAUI_Lessons.ViewModels
         }
         static string fname(string name)
         {
-            var documentPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            //var documentPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
+            //Note: MAUI has changed storage policy to use FileSystem.Current.AppDataDirectory
+            //instead of Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
+            var documentPath = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, "PrimesAppStep4vm", "Primes");
             documentPath = System.IO.Path.Combine(documentPath, "AOOP2", "Examples");
             if (!Directory.Exists(documentPath)) Directory.CreateDirectory(documentPath);
             return System.IO.Path.Combine(documentPath, name);

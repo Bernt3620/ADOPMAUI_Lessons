@@ -38,6 +38,11 @@ namespace ADOPMAUI_Lessons.ViewModels
                 new Lesson07aViewModel(typeof(PrimesAppStep4), "Primes Application Step4",
                         "Adding TappedItem eventhandler, AlertBox and Write all primes to disk",
                         "//lesson7/primesapplicationstep4?NrBatches=10"),
+                
+                new Lesson07aViewModel(typeof(PrimesAppStep5), "Primes Application Step5",
+                        "Step4 refractured into ViewModel",
+                        "//lesson7/primesapplicationstep5?NrBatches=10"),
+
 
             };
 
