@@ -11,7 +11,7 @@
         #endregion
 
         #region Data implementation 
-        // accessible as GlobalData.Data.xx 
+        // accessible as Global.Data.xx 
         public string Message { get; set;}
         public DateTime Time { get; set;}
         #endregion
