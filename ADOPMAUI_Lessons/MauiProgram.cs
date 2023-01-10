@@ -1,4 +1,6 @@
-﻿namespace ADOPMAUI_Lessons;
+﻿using ADOPMAUI_Lessons.Services;
+
+namespace ADOPMAUI_Lessons;
 
 public static class MauiProgram
 {
@@ -12,6 +14,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+
+
+            DependencyService.RegisterSingleton<IPrimeNumberService>(new PrimeNumberService());
 
 		return builder.Build();
 	}

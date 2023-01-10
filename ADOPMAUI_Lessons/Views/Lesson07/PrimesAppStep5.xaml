@@ -17,9 +17,9 @@
                     <Button Text="Get primes" Command="{Binding LoadPrimesCommand}" CommandParameter="{x:Reference progressBar}" HorizontalOptions="Start" />
                 </StackLayout>
 
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" HeightRequest="200" x:Name="layBusy" IsVisible="True">
-                    <ProgressBar x:Name="progressBar" WidthRequest="500" ProgressColor="Orange"
-                         VerticalOptions="CenterAndExpand" HorizontalOptions="Fill" Scale="2" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                    <ProgressBar x:Name="progressBar" WidthRequest="500" ProgressColor="Orange" HeightRequest="200"
+                         VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Scale="2" />
                 </StackLayout>
                 
                 <StackLayout>

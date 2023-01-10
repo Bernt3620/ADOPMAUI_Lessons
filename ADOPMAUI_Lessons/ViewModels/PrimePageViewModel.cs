@@ -47,9 +47,9 @@ namespace ADOPMAUI_Lessons.ViewModels
 
         public async Task LoadPrimes(ProgressBar pb)
         {
-            Progress<float> progressReporter = new Progress<float>(async value =>
+            Progress<float> progressReporter = new Progress<float>(value =>
             {
-                await pb.ProgressTo(value, 750, Easing.Linear);
+               pb.Progress = value;
             });
 
             pb.IsVisible = true;

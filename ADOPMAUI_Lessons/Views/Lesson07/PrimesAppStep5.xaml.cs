@@ -17,9 +17,11 @@ namespace ADOPMAUI_Lessons.Views.Lesson07
         public PrimesAppStep5()
         {
             InitializeComponent();
-            //BindingContext = _viewModel =  PrimePageViewModel(DependencyService.Get<IPrimeNumerService>());
 
-            BindingContext = _viewModel = new PrimePageViewModel(new PrimeNumberService());
+            var _service = DependencyService.Resolve<IPrimeNumberService>();
+            BindingContext = _viewModel =  new PrimePageViewModel(_service);
+
+            //BindingContext = _viewModel = new PrimePageViewModel(new PrimeNumberService());
         }
 
         protected override void OnAppearing()
@@ -57,6 +59,5 @@ namespace ADOPMAUI_Lessons.Views.Lesson07
                 }
             }
         }
-
     }
 }
