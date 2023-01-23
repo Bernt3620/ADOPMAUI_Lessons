@@ -18,10 +18,7 @@ namespace ADOPMAUI_Lessons.Views.Lesson07
         {
             InitializeComponent();
 
-            var _service = DependencyService.Resolve<IPrimeNumberService>();
-            BindingContext = _viewModel =  new PrimePageViewModel(_service);
-
-            //BindingContext = _viewModel = new PrimePageViewModel(new PrimeNumberService());
+            BindingContext = _viewModel = DependencyService.Resolve<PrimePageViewModel>();
         }
 
         protected override void OnAppearing()

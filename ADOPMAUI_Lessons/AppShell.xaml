@@ -12,14 +12,17 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="home" />
+    
     <ShellContent
     Title="Lesson 2"
     ContentTemplate="{DataTemplate views:Lesson02a}"
     Route="lesson2" />
+    
     <ShellContent
     Title="Lesson 3"
     ContentTemplate="{DataTemplate views:Lesson03a}"
     Route="lesson3" />
+    
     <FlyoutItem x:Name="flyLesson04" Title="Lesson 4">
         <ShellContent
                 Title="Lesson 4"
@@ -31,7 +34,13 @@
         <ShellContent
                 Title="Hierarchial navigation"
                 ContentTemplate="{DataTemplate views:Lesson05a}"
-                Route="hierachial" />
+                Route="hierachial1" />
+        </Tab>
+        <Tab Title="Hierarchial navigation">
+            <ShellContent
+                Title="Hierarchial navigation"
+                ContentTemplate="{DataTemplate views:Lesson05a}"
+                Route="hierachial2" />
         </Tab>
     </FlyoutItem>
     <FlyoutItem x:Name="flyLesson06" Title="Lesson 6" Route="lesson6">

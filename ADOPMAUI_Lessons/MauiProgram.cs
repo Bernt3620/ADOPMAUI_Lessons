@@ -1,4 +1,5 @@
 ﻿using ADOPMAUI_Lessons.Services;
+using ADOPMAUI_Lessons.ViewModels;
 
 namespace ADOPMAUI_Lessons;
 
@@ -15,8 +16,11 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+        //DependencyService.Resolve will get a new instance of PrimePageViewModel
+        DependencyService.Register<PrimePageViewModel>();
 
-            DependencyService.RegisterSingleton<IPrimeNumberService>(new PrimeNumberService());
+        //DependencyService.Resolve<IPrimeNumberService> will get the singleton instance of PrimeNumberService
+        DependencyService.RegisterSingleton<IPrimeNumberService>(new PrimeNumberService());
 
 		return builder.Build();
 	}

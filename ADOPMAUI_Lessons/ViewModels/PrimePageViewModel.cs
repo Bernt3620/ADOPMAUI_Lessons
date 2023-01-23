@@ -31,9 +31,10 @@ namespace ADOPMAUI_Lessons.ViewModels
             get => _primes;
         }
 
-        public PrimePageViewModel(IPrimeNumberService primesService)
+        public PrimePageViewModel()
         {
-            _service = primesService;
+
+            _service = DependencyService.Resolve<IPrimeNumberService>();
         }
         public async Task LoadPrimes()
         {
@@ -88,7 +89,6 @@ namespace ADOPMAUI_Lessons.ViewModels
 
             //Note: MAUI has changed storage policy to use FileSystem.Current.AppDataDirectory
             //instead of Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-
             var documentPath = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, "PrimesAppStep4vm", "Primes");
             documentPath = System.IO.Path.Combine(documentPath, "AOOP2", "Examples");
             if (!Directory.Exists(documentPath)) Directory.CreateDirectory(documentPath);

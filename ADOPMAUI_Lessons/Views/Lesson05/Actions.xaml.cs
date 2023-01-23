@@ -46,8 +46,8 @@ public partial class Actions : ContentPage
         //Pass data with QueryString to Actions
         //Example using Dictionary to generate a querystring
         var queryParams = new Dictionary<string, object>();
-        queryParams.Add("message", $"{message}. Hello from {nameof(Alerts)}");
-        queryParams.Add("time", $"{time}. Hello from {nameof(Alerts)}");
+        queryParams.Add("message", $"{message}. Hello from {nameof(Actions)}");
+        queryParams.Add("time", $"{time}. Hello from {nameof(Actions)}");
 
         await Shell.Current.GoToAsync("../alerts", queryParams);
     }
